@@ -1,0 +1,344 @@
+$gray-col: #d9d9d9;
+$green-col: #14a44d;
+$ppl-col: #275b2e;
+$ppl-hover-col: #42974d;
+$gray-light-col: #7a7a7a;
+$commn-box-shadow: 3px 3px 4px 0px #313131, 0px 0 0 #000000;
+
+// Responsive
+@mixin xxxl {
+  @media only screen and (min-width: 1920px) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media only screen and (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin l {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin md {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin sm {
+  @media only screen and (min-width: 425px) {
+    @content;
+  }
+}
+@mixin xsm {
+  @media only screen and (min-width: 310px) {
+    @content;
+  }
+}
+
+// Hero Image
+@mixin heroImage {
+  width: 100%;
+  height: 100%;
+}
+@mixin heroTitle {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: #fff;
+  transition-duration: 300ms;
+  z-index: 10;
+  @include md {
+    font-size: 18px;
+  }
+  @include l {
+    font-size: 28px;
+  }
+}
+@mixin rAlcommon {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 0.3rem;
+}
+
+@mixin beforeElement {
+  position: absolute;
+  content: "";
+  left: 0.3rem;
+  right: 0.3rem;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  background: linear-gradient(180deg, #00000000, #010101ba);
+}
+@mixin hoverAfterElement {
+  position: absolute;
+  content: "";
+  left: 0.3rem;
+  right: 0.3rem;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  background: linear-gradient(180deg, rgb(0 0 0 / 48%), rgb(0 0 0 / 28%));
+  top: 0.6rem;
+  bottom: 0.6rem;
+  opacity: 0;
+  transition-duration: 300ms;
+}
+
+@mixin sectionHead {
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+  color: #000;
+  @include xsm {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  @include sm {
+    font-weight: 700;
+    font-size: 28px;
+  }
+  @include md {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  @include l {
+    font-weight: 700;
+    font-size: 26px;
+  }
+  @include xxl {
+    font-weight: 900;
+    font-size: 40px;
+  }
+}
+
+@mixin hr-devider {
+  width: 100%;
+  height: 8px;
+  background-color: #833ab8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin: 1rem auto;
+}
+
+// Who We Are
+@mixin memberCard {
+  background-color: $gray-col;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+@mixin memberInnerCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@mixin memberCardImg {
+  width: 180px;
+  height: 180px;
+  border-radius: 99%;
+  border: 2px solid $ppl-col;
+  margin: 1rem 0;
+}
+
+@mixin buttonGroup {
+  background-color: #d9d9d9;
+  padding: 0.5rem 0.2rem;
+  border-radius: 0.5rem;
+
+  @include xsm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 0.5rem;
+  }
+  @include sm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 0.5rem;
+  }
+  @include md {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+@mixin buttonGroupSingleBTN {
+  background-color: #fff;
+  box-shadow: none;
+  border-radius: 0.5rem;
+  padding: 0.3rem 4rem;
+  margin: 0 0.7rem;
+  transition-duration: 300ms;
+  width: 350px;
+  font-weight: 700;
+
+  @include xsm {
+    margin: 5px 0;
+    width: 100%;
+    font-size: 8px;
+  }
+  @include sm {
+    margin: 5px 0;
+  }
+  @include md {
+    width: 190px;
+    font-weight: 700;
+    font-size: 10px;
+    padding: 0.3rem 0;
+    margin: 0 5px;
+  }
+  @include l {
+    width: 290px;
+    font-weight: 700;
+    font-size: 10px;
+  }
+  @include xl {
+    width: 350px;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  &:hover {
+    background-color: $green-col;
+    color: #fff;
+  }
+  &:active {
+    background-color: $green-col;
+    color: #fff;
+  }
+  &:focus {
+    background-color: $green-col;
+    color: #fff;
+  }
+}
+
+@mixin threeCardSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 60px;
+  box-shadow: 5px 5px 7px #b8b8b8, -5px -5px 7px #ffffff;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  &:hover {
+    box-shadow: none;
+  }
+
+  @include xsm {
+    margin: 1rem 0;
+    border-radius: 40px;
+  }
+  @include sm {
+    margin: 1rem 0;
+    border-radius: 40px;
+  }
+  @include md {
+    padding: 1rem;
+    border-radius: 20px;
+  }
+  @include l {
+    padding: 2rem;
+    border-radius: 30px;
+  }
+  @include xxl {
+    padding: 2rem;
+    border-radius: 50px;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 99%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+
+    @include xsm {
+      width: 150px;
+      height: 150px;
+    }
+    @include sm {
+      width: 200px;
+      height: 200px;
+    }
+    @include md {
+      width: 130px;
+      height: 130px;
+    }
+    @include l {
+      width: 180px;
+      height: 180px;
+    }
+    @include xxl {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  h4 {
+    text-align: center;
+    color: black;
+
+    @include xsm {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    @include md {
+      font-size: 12px;
+      font-weight: 700;
+    }
+    @include l {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
+
+@mixin green {
+  color: $green-col;
+  font-weight: 500;
+}
+@mixin ppl {
+  color: $ppl-col;
+  font-weight: 500;
+}
+
+// Notice Bord Section
+.c-w-c {
+  #search-button {
+    border-radius: 99%;
+    height: 3rem;
+    width: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: none !important;
+    padding: 0;
+    color: #313131;
+    @include xsm {
+      display: block;
+    }
+    @media only screen and (min-width: 990px) {
+      display: none;
+    }
+  }
+}

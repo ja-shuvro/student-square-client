@@ -1,0 +1,330 @@
+@import "./variabls";
+footer {
+  background-color: $ppl-col;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  color: #fff;
+  a {
+    color: #fff;
+  }
+  p {
+    color: #fff;
+  }
+  .f-top {
+    border-bottom: 1px solid #a6a6a6;
+    margin: 0 2rem;
+    .row {
+      .col-md-4 {
+        .logo-f-sec {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          height: 100%;
+
+          @include xsm {
+            align-items: center;
+          }
+          @include sm {
+            align-items: center;
+          }
+          @include md {
+            align-items: flex-start;
+          }
+          a {
+            box-shadow: none;
+            background-color: #fff;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            img {
+              width: 150px;
+            }
+          }
+          .short-dis {
+            font-size: 18px;
+            font-weight: 600;
+            padding-right: 10rem;
+            color: #fff;
+            @include xsm {
+              text-align: center;
+              padding-right: 0;
+            }
+            @include sm {
+              text-align: center;
+              padding-right: 0;
+            }
+            @include md {
+              text-align: left;
+              padding-right: 0;
+            }
+            @include l {
+              padding-right: 4;
+            }
+            @include xl {
+              padding-right: 8;
+            }
+            @include xxxl {
+              padding-right: 10;
+            }
+          }
+          .becomeDonor {
+            border-radius: 7px;
+            color: #92d050;
+            margin-top: 4rem;
+          }
+        }
+
+        .menu-f-sec {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+
+          @include xsm {
+            align-items: center;
+          }
+          @include sm {
+            align-items: center;
+          }
+          @include md {
+            align-items: flex-start;
+          }
+          .m-f-head {
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+          }
+          .f-menus {
+            display: flex;
+            justify-content: flex-start;
+
+            @include xsm {
+              flex-direction: column;
+              align-items: center;
+            }
+            @include sm {
+              flex-direction: column;
+              align-items: center;
+            }
+            @include md {
+              flex-direction: row;
+              align-items: flex-start;
+            }
+            .f-m-left {
+              display: flex;
+              flex-direction: column;
+
+              @include xsm {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+              }
+              @include sm {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+              }
+              @include md {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: left;
+              }
+              a {
+                color: #fff;
+                margin-right: 3rem;
+                @include xsm {
+                  margin: 0;
+                }
+                @include sm {
+                  margin: 0;
+                }
+                @include md {
+                  margin-right: 3rem;
+                }
+
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+            .f-m-right {
+              display: flex;
+              flex-direction: column;
+              @include xsm {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+              }
+              @include sm {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+              }
+              @include md {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: left;
+              }
+              a {
+                color: #fff;
+                margin-right: 3rem;
+                @include xsm {
+                  margin: 0;
+                }
+                @include sm {
+                  margin: 0;
+                }
+                @include md {
+                  margin-right: 3rem;
+                }
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+
+        .contact-f-sec {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+
+          @include xsm {
+            align-items: center;
+          }
+
+          @include sm {
+            align-items: center;
+          }
+          @include md {
+            align-items: flex-start;
+          }
+          .contact-head {
+            font-size: 18px;
+            font-weight: 500;
+          }
+          .c-f-top {
+            p {
+              @include xsm {
+                text-align: center;
+              }
+              @include sm {
+                text-align: center;
+              }
+              @include md {
+                text-align: left;
+              }
+              a {
+              }
+            }
+          }
+          .c-f-bottom {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            margin-bottom: 1rem;
+            a {
+              background: #fff;
+              width: 40px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 99%;
+              margin-right: 5px;
+              transition-duration: 0.3s;
+
+              &:hover {
+                background-color: $gray-col;
+              }
+              i {
+                color: $ppl-col;
+                font-size: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .f-bottom {
+    margin: 0 2rem;
+    margin-top: 1rem;
+    .row {
+      .col-md-4 {
+        .get-app {
+          @include xsm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          @include sm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          @include md {
+            display: block;
+          }
+          a {
+            img {
+              width: 150px;
+
+              @include md {
+                width: 100px;
+              }
+              @include l {
+                width: 150px;
+              }
+            }
+          }
+        }
+
+        .designed-dev {
+          p {
+            text-align: center;
+            @include xsm {
+              font-size: 13px;
+            }
+            @include sm {
+              font-size: 13px;
+            }
+            @include xl {
+              font-size: 16px;
+            }
+            a {
+            }
+          }
+        }
+
+        .copyright {
+          p {
+            text-align: right;
+            @include xsm {
+              font-size: 13px;
+              text-align: center;
+            }
+            @include sm {
+              font-size: 13px;
+              text-align: center;
+            }
+            @include xl {
+              text-align: right;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

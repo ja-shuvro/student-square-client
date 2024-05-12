@@ -1,0 +1,1717 @@
+@import "./variabls";
+
+.custom-container {
+  margin: auto;
+  padding: 1rem;
+
+  .main-hero-section {
+    .row {
+      .col-md-6 {
+        padding: 0;
+        .h-lef-sec {
+          @include rAlcommon;
+          padding-top: 0.6rem;
+          padding-bottom: 0.6rem;
+          transition-duration: 300ms;
+
+          img {
+            @include heroImage;
+            border-radius: 10px;
+          }
+
+          h2 {
+            @include heroTitle;
+            text-transform: uppercase;
+
+            &:hover {
+              bottom: 3rem;
+            }
+          }
+
+          &::before {
+            @include beforeElement;
+            top: 0.6rem;
+            bottom: 0.6rem;
+            transition-duration: 300ms;
+            border-radius: 10px;
+          }
+
+          &::after {
+            @include hoverAfterElement;
+            top: 0.6rem;
+            bottom: 0.6rem;
+            transition-duration: 300ms;
+            border-radius: 10px;
+          }
+          &:hover::after {
+            opacity: 1;
+          }
+          &:hover h2 {
+            bottom: 3rem;
+          }
+        }
+
+        .h-right-sec {
+          @include rAlcommon;
+          @include xsm {
+            padding: 0;
+          }
+          @include md {
+            padding: 0.3rem;
+          }
+          .h-r-top {
+            position: relative;
+            padding: 0.3rem;
+            transition-duration: 300ms;
+            text-transform: uppercase;
+
+            &::before {
+              @include beforeElement;
+              left: 0.3rem;
+              right: 0.3rem;
+              top: 0.3rem;
+              bottom: 0.3rem;
+              transition-duration: 300ms;
+              border-radius: 10px;
+            }
+            img {
+              @include heroImage;
+              border-radius: 10px;
+            }
+            h2 {
+              @include heroTitle;
+            }
+            &::after {
+              @include hoverAfterElement;
+              top: 0.3rem;
+              bottom: 0.3rem;
+              transition-duration: 300ms;
+              border-radius: 10px;
+            }
+            &:hover::after {
+              opacity: 1;
+            }
+            &:hover h2 {
+              bottom: 3rem;
+            }
+          }
+          .h-r-bottom {
+            position: relative;
+            padding: 0.3rem;
+            transition-duration: 300ms;
+            text-transform: uppercase;
+
+            &::before {
+              @include beforeElement;
+              left: 0.3rem;
+              right: 0.3rem;
+              top: 0.3rem;
+              bottom: 0.3rem;
+              border-radius: 10px;
+            }
+            img {
+              @include heroImage;
+              border-radius: 10px;
+            }
+            h2 {
+              @include heroTitle;
+            }
+            &::after {
+              @include hoverAfterElement;
+              top: 0.3rem;
+              bottom: 0.3rem;
+              transition-duration: 300ms;
+              border-radius: 10px;
+            }
+            &:hover::after {
+              opacity: 1;
+            }
+            &:hover h2 {
+              bottom: 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-two-main {
+    margin: 6rem 0;
+    @include xsm {
+      margin: 3rem 0;
+    }
+    @include sm {
+      margin: 3rem 0;
+    }
+    @include md {
+      margin: 4rem 0;
+      margin-bottom: 0;
+    }
+    @include l {
+      margin: 3rem 0;
+      margin-bottom: 0;
+    }
+
+    .section-two {
+      h1 {
+        @include sectionHead;
+      }
+      p {
+        text-align: center;
+        color: #000;
+        font-size: 22px;
+        margin: 2rem 0;
+        @include xsm {
+          font-size: 13px;
+          margin: 1rem 0;
+        }
+        @include sm {
+          font-size: 13px;
+          margin: 1rem 0;
+        }
+        @include md {
+          font-size: 16px;
+          margin: 1rem 0;
+        }
+        @include l {
+          font-size: 14px;
+          margin: 1.5rem 0;
+        }
+        @include xxl {
+          font-size: 20px;
+          margin: 1rem 0;
+        }
+      }
+      @for $i from 1 through 2 {
+        .section-two-card#{$i} {
+          background-color: #f2f2f2;
+          padding: 2rem;
+          border-radius: 40px;
+          @include xsm {
+            padding: 1rem;
+          }
+
+          .row {
+            .col-md-4 {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              .each-card {
+                @include threeCardSection;
+              }
+            }
+          }
+        }
+      }
+
+      .section-two-card2 {
+        background-color: #ffffff;
+        border-radius: 40px;
+
+        .row {
+          .col-md-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .each-card {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              background: #fff;
+              padding: 2rem;
+              border-radius: 0;
+              box-shadow: none;
+              cursor: default;
+
+              @include xsm {
+                padding: 0;
+                margin: 0.5rem 0;
+              }
+              @include sm {
+                padding: 0;
+              }
+              @include md {
+                padding: 2rem;
+              }
+              img {
+                width: 100px;
+                height: 100px;
+                border-radius: 0;
+                object-fit: cover;
+                margin-bottom: 1rem;
+
+                @include xsm {
+                  width: 50px;
+                  height: 50px;
+                  margin-bottom: 0rem;
+                }
+                @include l {
+                  width: 100px;
+                  height: 100px;
+                }
+              }
+              h4 {
+                text-align: center;
+                color: black;
+                font-size: 20px;
+                font-weight: 700;
+
+                @include xsm {
+                  font-size: 14px;
+                  font-weight: 700;
+                }
+                @include md {
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+                @include l {
+                  font-size: 14px;
+                  font-weight: 700;
+                  margin-top: 0.5rem;
+                }
+                @include xxl {
+                  font-size: 18px;
+                  font-weight: 700;
+                  margin-top: 0.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .section-two-card3 {
+        .video-player {
+          width: 100%;
+          height: 600px;
+          border-radius: 30px;
+
+          @include xsm {
+            height: 200px;
+          }
+          @include sm {
+            height: 300px;
+          }
+          @include md {
+            height: 400px;
+            margin-top: 2.5rem;
+          }
+          @include l {
+            height: 500px;
+            margin-top: 3rem;
+          }
+          @include xxl {
+            height: 600px;
+            margin-top: 5rem;
+          }
+        }
+      }
+      h3 {
+        font-size: 35px;
+        text-align: center;
+        font-weight: 500;
+        color: #000;
+        margin-top: 6rem;
+
+        @include xsm {
+          font-size: 25px;
+        }
+        @include sm {
+          font-size: 25px;
+        }
+        @include md {
+          font-size: 28px;
+          margin-top: 2.5rem;
+        }
+        @include l {
+          font-size: 26px;
+          margin-top: 3rem;
+        }
+        @include xxl {
+          font-size: 40px;
+          margin-top: 5rem;
+        }
+      }
+    }
+  }
+
+  .section-three-main {
+    @include xsm {
+      margin: 3rem 0;
+    }
+    @include xsm {
+      margin: 3rem 0;
+    }
+    @include md {
+      margin: 0rem 0;
+    }
+    @include l {
+      margin: 3rem 0;
+      margin-bottom: 0;
+    }
+    .section-three {
+      h1 {
+        @include sectionHead;
+      }
+      .button-grupe {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem 0;
+
+        .main-btn {
+          @include buttonGroup;
+          button {
+            @include buttonGroupSingleBTN;
+          }
+        }
+      }
+      .hr-d {
+        @include hr-devider;
+      }
+      .blog-card-sec {
+        .row {
+          .col-md-3 {
+            .each-card {
+              margin: 1rem;
+              img {
+                width: 100%;
+              }
+              .tag {
+                font-size: 12px;
+                text-transform: uppercase;
+                font-style: italic;
+                font-weight: bold;
+                color: $gray-light-col;
+              }
+              h5 {
+                @include md {
+                  font-size: 12px;
+                  font-weight: 600;
+                }
+                @include l {
+                  font-size: 14px;
+                  font-weight: 600;
+                }
+                @include xl {
+                  font-size: 16px;
+                  font-weight: 700;
+                }
+                @include xxl {
+                  font-size: 18px;
+                  font-weight: 700;
+                }
+              }
+              .subtitle {
+                @include md {
+                  font-size: 10px;
+                  font-weight: 500;
+                }
+                @include l {
+                  font-size: 12px;
+                  font-weight: 500;
+                }
+                @include xl {
+                  font-size: 14px;
+                  font-weight: 600;
+                }
+                @include xxl {
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+
+          .slick-dots {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+
+            li {
+              &.slick-active {
+                button {
+                  color: $ppl-col;
+                }
+              }
+              button {
+                background-color: #fff;
+                border: none;
+                outline: none;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-four-main {
+    margin: 6rem 0;
+    @include xsm {
+      margin: 3rem 0;
+    }
+    @include xsm {
+      margin: 3rem 0;
+    }
+    @include md {
+      margin: 4rem 0;
+    }
+    @include l {
+      margin: 3rem 0;
+      margin-bottom: 0;
+    }
+    .section-four {
+      h1 {
+        @include sectionHead;
+      }
+      .button-grupe {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem 0;
+
+        .main-btn {
+          background-color: #d9d9d9;
+          padding: 0.5rem 0.2rem;
+          border-radius: 0.5rem;
+
+          @include xsm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            padding: 0.5rem;
+          }
+          @include sm {
+            flex-direction: row;
+          }
+          button {
+            background-color: #fff;
+            box-shadow: none;
+            border-radius: 0.5rem;
+            padding: 0.3rem 0;
+            margin: 0 0.7rem;
+            transition-duration: 300ms;
+            width: 150px;
+            font-weight: 700;
+            cursor: default;
+
+            @include xsm {
+              margin: 5px 0;
+            }
+          }
+          input {
+            background-color: #fff;
+            box-shadow: none;
+            border-radius: 0.5rem;
+            padding: 0.2rem 1rem;
+            margin: 0 0.7rem;
+            transition-duration: 300ms;
+            width: 150px;
+            font-weight: 700;
+            outline: none;
+            border: none;
+            font-size: 13px;
+            cursor: text;
+          }
+        }
+      }
+      .hr-d {
+        @include hr-devider;
+      }
+
+      .maga-card {
+        margin: 3rem 0;
+        @include md {
+          margin-bottom: 0;
+        }
+        .row {
+          .col-md-3 {
+            .each-card {
+              @include sm {
+                margin: 1rem 0;
+              }
+              @include md {
+                margin: 0;
+              }
+              img {
+                object-fit: cover;
+                height: 620px;
+                width: 460px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include xsm {
+                  height: 250px;
+                  width: 200px;
+                }
+                @include sm {
+                  height: 250px;
+                  width: 200px;
+                }
+                @include md {
+                  height: 180px;
+                  width: 140px;
+                }
+                @include l {
+                  height: 240px;
+                  width: 185px;
+                }
+                @include xl {
+                  height: 280px;
+                  width: 190px;
+                }
+                @include xxl {
+                  height: 250px;
+                  width: 180px;
+                }
+              }
+              h5 {
+                color: #000;
+                text-align: center;
+                margin-top: 1rem;
+                font-weight: 700;
+
+                @include xsm {
+                  font-weight: 700;
+                  font-size: 14px;
+                }
+                @include md {
+                  font-weight: 700;
+                  font-size: 12px;
+                }
+                @include l {
+                  font-weight: 700;
+                  font-size: 16px;
+                }
+                @include xl {
+                  font-weight: 700;
+                  font-size: 18px;
+                }
+                @include xxl {
+                  font-weight: 700;
+                  font-size: 20px;
+                }
+                @include xxxl {
+                  font-weight: 700;
+                  font-size: 22px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .button-ex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include l {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 1.5rem;
+        }
+        button {
+          background-color: $ppl-col;
+          color: #fff;
+          border-radius: 5px;
+
+          &:hover {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  .section-five-main {
+    @include xsm {
+      margin: 3rem 0;
+    }
+    @include xsm {
+      margin: 3rem 0;
+    }
+    @include md {
+      margin: 4rem 0;
+    }
+    @include l {
+      margin: 5rem 0;
+    }
+    .section-five {
+      h1 {
+        @include sectionHead;
+      }
+      .button-grupe {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem 0;
+
+        .main-btn {
+          @include buttonGroup;
+          button {
+            @include buttonGroupSingleBTN;
+          }
+        }
+      }
+      .hr-d {
+        @include hr-devider;
+      }
+      .section-two-card {
+        background-color: #f2f2f2;
+        padding: 2rem;
+        border-radius: 40px;
+        margin: 3rem 0;
+
+        .row {
+          .col-md-4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            // .each-card {
+            //   display: flex;
+            //   flex-direction: column;
+            //   align-items: center;
+            //   justify-content: center;
+            //   background: #fff;
+            //   padding: 2rem;
+            //   border-radius: 60px;
+            //   box-shadow: 5px 5px 7px #b8b8b8, -5px -5px 7px #ffffff;
+            //   cursor: pointer;
+            //   transition-duration: 0.3s;
+            //   &:hover {
+            //     box-shadow: none;
+            //   }
+
+            //   @include xsm {
+            //     margin: 1rem 0;
+            //     border-radius: 40px;
+            //   }
+            //   @include sm {
+            //     margin: 1rem 0;
+            //     border-radius: 40px;
+            //   }
+            //   @include md {
+            //     padding: 1rem;
+            //     border-radius: 30px;
+            //   }
+            //   @include l {
+            //     padding: 2rem;
+            //     border-radius: 60px;
+            //   }
+            //   img {
+            //     width: 300px;
+            //     height: 300px;
+            //     border-radius: 99%;
+            //     object-fit: cover;
+            //     margin-bottom: 1rem;
+            //     @include xsm {
+            //       width: 200px;
+            //       height: 200px;
+            //     }
+            //     @include sm {
+            //       width: 200px;
+            //       height: 200px;
+            //     }
+            //     @include md {
+            //       width: 150px;
+            //       height: 150px;
+            //     }
+            //     @include l {
+            //       width: 235px;
+            //       height: 235px;
+            //     }
+            //     @include xxl {
+            //       width: 300px;
+            //       height: 300px;
+            //     }
+            //   }
+            //   h4 {
+            //     text-align: center;
+            //     color: black;
+            //     @include md {
+            //       font-size: 16px;
+            //       font-weight: 600;
+            //     }
+            //     @include l {
+            //       font-size: 23px;
+            //       font-weight: 700;
+            //     }
+            //   }
+            // }
+
+            .each-card {
+              @include threeCardSection;
+            }
+          }
+        }
+      }
+
+      .button-ex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+          background-color: $ppl-col;
+          color: #fff;
+          border-radius: 5px;
+
+          &:hover {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  .section-six-main {
+    margin: 6rem 0;
+    @include xsm {
+      margin: 3rem 0;
+    }
+    @include xsm {
+      margin: 3rem 0;
+    }
+    @include md {
+      margin: 4rem 0;
+    }
+    @include l {
+      margin: 5rem 0;
+    }
+    .section-six {
+      h1 {
+        @include sectionHead;
+        margin: 3rem 0;
+      }
+      .ins-card {
+        background-color: #f2f2f2;
+        border-radius: 40px;
+        padding: 3rem;
+
+        @include xsm {
+          padding: 1rem;
+        }
+        @include md {
+          padding: 2rem;
+        }
+        @include l {
+          padding: 3rem;
+        }
+        .row {
+          .col-md-3 {
+            .each-card {
+              background-color: #fff;
+              border-radius: 30px;
+              margin: 0 1rem;
+              img {
+                width: 100%;
+                border-top-right-radius: 30px;
+                border-top-left-radius: 30px;
+              }
+              h5 {
+                padding-top: 1rem;
+                padding: 1rem 1.5rem;
+                color: #000;
+                font-weight: 700;
+
+                @include l {
+                  padding-bottom: 0;
+                }
+                @include xl {
+                  padding-bottom: 1rem;
+                }
+              }
+              .dis {
+                padding: 0 1.5rem;
+                padding-bottom: 2rem;
+                color: #000;
+
+                @include xsm {
+                  font-size: 11px;
+                }
+                @include sm {
+                  font-size: 11px;
+                }
+                @include l {
+                  font-size: 13px;
+                }
+                @include xl {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+
+        .nextArro {
+          position: absolute;
+          right: -2.5rem;
+          width: auto;
+          top: 48%;
+          font-size: 2.3rem;
+          z-index: 10;
+          cursor: pointer;
+
+          @include xsm {
+            right: -1.5rem;
+          }
+        }
+        .prevArro {
+          position: absolute;
+          left: -2.5rem;
+          width: auto;
+          top: 48%;
+          font-size: 2.3rem;
+          z-index: 10;
+          cursor: pointer;
+          @include xsm {
+            left: -1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .section-seven-main {
+    .section-seven {
+      .desk-sec {
+        display: block;
+      }
+      .desk-sec {
+        display: none;
+      }
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .s-7-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        .main-c {
+          height: 100%;
+          .s-7-slider {
+            height: 100%;
+            .main-slider {
+              height: 100%;
+              .row {
+                height: 100%;
+                .col-md-6 {
+                  flex: 0 0 auto;
+                  width: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  img {
+                    width: 65%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: auto;
+                    height: 50%;
+                    border-radius: 70px;
+                    object-fit: cover;
+                    @include l {
+                      border-radius: 20px;
+                    }
+                    @include xxl {
+                      width: 70%;
+                      height: 60%;
+                    }
+                  }
+                  h3 {
+                  }
+                }
+
+                .title-section {
+                  flex-direction: column;
+                  display: flex;
+                  align-items: flex-start;
+
+                  h3 {
+                    font-weight: 800;
+                    font-size: 32px;
+                    color: #000;
+
+                    @include l {
+                      font-weight: 800;
+                      font-size: 18px;
+                      color: #000;
+                      margin-top: 3rem;
+                    }
+                    @include l {
+                      font-size: 28px;
+                      margin-top: 1rem;
+                    }
+                  }
+                  .button-ex {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 4rem;
+
+                    button {
+                      background-color: $ppl-col;
+                      color: #fff;
+                      border-radius: 5px;
+
+                      &:hover {
+                        box-shadow: none;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .slick-list {
+              height: 100%;
+              .slick-track {
+                height: 100%;
+              }
+            }
+
+            .slick-dots {
+              position: absolute;
+              right: 43%;
+              top: 49%;
+              display: flex;
+              list-style: none;
+
+              @include l {
+                right: 37%;
+                top: 52%;
+              }
+              @include xl {
+                right: 39%;
+              }
+              @include xxl {
+                right: 39%;
+              }
+              @include xxxl {
+                right: 39%;
+                top: 51%;
+              }
+              li {
+                height: 0;
+                button {
+                  background-color: #fff;
+                  border: none;
+                  color: #fff;
+                  height: 0;
+                  font-size: 0;
+                  padding: 0;
+
+                  &::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background-color: #000;
+                    display: flex;
+                    border-radius: 99%;
+                    margin: 0 5px;
+                    @include l {
+                      width: 12px;
+                      height: 12px;
+                    }
+                    @include xxl {
+                      width: 20px;
+                      height: 20px;
+                    }
+                  }
+                  &:hover {
+                    &::after {
+                      content: "";
+                      width: 21px;
+                      height: 21px;
+                      display: flex;
+                      border-radius: 99%;
+                      margin: 0 5px;
+                      position: absolute;
+                      top: 0;
+                      background-color: $ppl-col;
+                    }
+                  }
+                }
+              }
+
+              .slick-active {
+                &::after {
+                  content: "";
+                  width: 21px;
+                  height: 21px;
+                  display: flex;
+                  border-radius: 99%;
+                  margin: 0 5px;
+                  position: absolute;
+                  top: 0;
+                  background-color: $ppl-col;
+                  @include l {
+                    width: 12px;
+                    height: 12px;
+                    top: 6px;
+                  }
+                  @include xxl {
+                    width: 20px;
+                    height: 20px;
+                    top: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .desk-sec {
+        display: none;
+      }
+      .mob-sec {
+        display: block;
+      }
+    }
+    @media only screen and (min-width: 1024px) {
+      .desk-sec {
+        display: block;
+      }
+      .mob-sec {
+        display: none;
+      }
+    }
+
+    .section-seven {
+      &.mob-sec {
+        .mySwiper {
+          swiper-slide {
+            .c-w-logo-slider {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              padding-bottom: 3rem;
+              .logo {
+                width: 100px;
+              }
+              h2 {
+                @include sectionHead;
+                @include md {
+                  font-size: 28px;
+                }
+                margin: 1rem 0;
+              }
+              .title {
+                font-size: 20px;
+                color: #000;
+                font-weight: 700;
+                text-align: center;
+
+                @include xsm {
+                  font-size: 14px;
+                  font-weight: 500;
+                }
+              }
+              .thumb {
+              }
+            }
+          }
+        }
+        .button-ex {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 2rem;
+          button {
+            background-color: $ppl-col;
+            color: #fff;
+            border-radius: 5px;
+
+            &:hover {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-eight-main {
+    margin: 6rem 0;
+    @include xsm {
+      margin: 3rem 0;
+    }
+    @include xsm {
+      margin: 3rem 0;
+    }
+    @include md {
+      margin: 2rem 0;
+    }
+    @include l {
+      margin: 5rem 0;
+    }
+    @include xxl {
+      margin: 3rem 0;
+    }
+    .section-eight {
+      .row {
+        .a-p-s-left {
+          @include sm {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+          }
+          @include md {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+          }
+          .main-left-sec {
+            margin: 1rem 5rem !important;
+            border-radius: 35px;
+            padding: 3rem;
+            background-color: $gray-col;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            @include xsm {
+              margin: 0 !important;
+              margin-bottom: 3rem !important;
+              padding: 1.5rem;
+              width: 100%;
+            }
+            @include sm {
+              margin: 0;
+              margin-bottom: 3rem;
+            }
+            @include md {
+              margin: 0;
+            }
+            @include l {
+              margin: 1rem 1rem;
+              width: 100%;
+            }
+            @include xxl {
+              margin: auto !important;
+              width: 68%;
+            }
+            h1 {
+              color: #000;
+              font-weight: 900;
+              font-size: 54px;
+
+              @include xsm {
+                font-weight: 700;
+                font-size: 20px;
+              }
+              @include sm {
+                font-weight: 700;
+                font-size: 27px;
+              }
+              @include md {
+                font-weight: 700;
+                font-size: 22px;
+              }
+              @include l {
+                font-weight: 700;
+                font-size: 27px;
+              }
+              @include xl {
+                font-weight: 900;
+                font-size: 54px;
+              }
+              @include xxl {
+                font-size: 34px;
+              }
+            }
+            p {
+              font-size: 28px;
+              color: #000;
+              margin-top: 2rem;
+              @include xsm {
+                font-size: 16px;
+                margin: 0;
+                margin-bottom: 0.2rem;
+              }
+              @include sm {
+                font-weight: 600;
+                font-size: 18px;
+                margin-top: 0.5rem;
+              }
+              @include md {
+                font-weight: 600;
+                font-size: 15px;
+                margin-top: 0.5rem;
+              }
+              @include l {
+                font-weight: 700;
+                font-size: 16px;
+                margin-top: 0;
+              }
+            }
+            img {
+              width: 100%;
+            }
+            .app-section {
+              margin-top: 1.5rem;
+              width: 100%;
+              .row {
+                @include xsm {
+                  flex-direction: row;
+                }
+                a {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  @include xsm {
+                    width: 50%;
+                  }
+                  @include sm {
+                    width: 50%;
+                  }
+
+                  img {
+                    width: 300px;
+
+                    @include xsm {
+                      width: 100px;
+                    }
+                    @include sm {
+                      width: 140px;
+                    }
+                    @include md {
+                      width: 100px;
+                    }
+                    @include l {
+                      width: 170px;
+                    }
+                    @include xl {
+                      width: 300px;
+                    }
+                    @include xxl {
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .a-p-s-right {
+          @include sm {
+            width: 100%;
+          }
+          @include md {
+            width: 50%;
+          }
+          img {
+            width: 70%;
+            display: flex;
+            height: 100%;
+            object-fit: contain;
+            object-fit: contain;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            @include md {
+              width: 100%;
+            }
+            @include xxl {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.section-nine-main {
+  @include xsm {
+    margin: 3rem 0;
+  }
+  @include xsm {
+    margin: 3rem 0;
+  }
+  @include md {
+    margin: 2rem 0;
+  }
+  @include l {
+    margin: 5rem 0;
+  }
+  @include xxl {
+    margin: 3rem 0;
+  }
+  .section-nine {
+    h1 {
+      @include sectionHead;
+      text-decoration: underline;
+    }
+
+    .slider-nine {
+      #slider-2 {
+        background-image: url(../img/s-9/background.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0 1rem;
+        padding-top: 6rem;
+        h2 {
+          @include sectionHead;
+          color: #fff;
+          margin-bottom: 3rem;
+        }
+        p {
+          @include sectionHead;
+          color: #fff;
+          padding: 3rem;
+          font-size: 30px;
+
+          @include xsm {
+            padding: 2rem 0;
+            font-weight: 700;
+            font-size: 18px;
+          }
+          @include sm {
+            font-weight: 700;
+            font-size: 18px;
+          }
+          @include md {
+            font-weight: 700;
+            font-size: 18px;
+          }
+          @include l {
+            font-weight: 700;
+            font-size: 24px;
+          }
+          @include xl {
+            font-weight: 700;
+            font-size: 28px;
+          }
+          @include xxxl {
+            font-weight: 700;
+            font-size: 30px;
+          }
+        }
+        .gallery-slider {
+          .micro-slider {
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.section-ten-main {
+  margin-top: 6rem;
+  .section-ten {
+    padding: 6rem 0;
+    background-image: url(../img/s-10/Picture14.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 1rem;
+    h4 {
+      @include sectionHead;
+      padding-top: 10rem;
+      margin-bottom: 3rem;
+      color: #fff;
+      font-size: 40px;
+    }
+
+    .news-slider {
+      padding-bottom: 6rem;
+      .main-n-slider {
+        background-color: #fff;
+        border-radius: 40px;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        position: relative;
+
+        @include xsm {
+          width: 100%;
+          border-radius: 10px;
+        }
+        @include sm {
+          width: 100%;
+          border-radius: 10px;
+        }
+        @include md {
+          width: 90%;
+          border-radius: 40px;
+        }
+        @include l {
+          width: 80%;
+        }
+        @include xl {
+          width: 70%;
+        }
+        @include xxl {
+          width: 60%;
+        }
+        @include xxl {
+          width: 50%;
+        }
+
+        .main-slider {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          img {
+            width: 308px;
+            border-radius: 10px;
+            height: 142px;
+            margin-left: 1rem;
+            @include xsm {
+              width: 100px;
+              height: 96px;
+              border-radius: 5px;
+              margin-left: 0.2rem;
+              object-fit: cover;
+            }
+            @include sm {
+              width: 150px;
+              margin-left: 0;
+            }
+            @include md {
+              width: 308px;
+              margin-left: 1rem;
+            }
+          }
+          .dis {
+            padding: 1rem 2rem;
+            @include xsm {
+              padding: 0.2rem 0;
+              padding-left: 1rem;
+            }
+            @include sm {
+              padding: 1rem 10px;
+            }
+            @include md {
+              padding: 1rem 2rem;
+            }
+            img {
+              width: 65px;
+              height: 32px;
+              border-radius: 0px;
+              margin-left: 0;
+              @include xsm {
+                width: 40px;
+                height: 15px;
+              }
+              @include sm {
+                width: 40px;
+                height: 15px;
+              }
+              @include md {
+                width: 65px;
+                height: 32px;
+              }
+            }
+            .newsTitle {
+              font-size: 16px;
+              font-weight: 700;
+              color: #000;
+              margin-bottom: 5px;
+              @include xsm {
+                font-size: 10px;
+                line-height: 1.3;
+              }
+              @include sm {
+                font-size: 12px;
+              }
+              @include md {
+                font-size: 16px;
+              }
+            }
+            .subtitle {
+              font-size: 12px;
+              font-weight: 500;
+              color: #000;
+              margin-bottom: 0px;
+              @include xsm {
+                font-size: 8px;
+              }
+              @include sm {
+                font-size: 10px;
+              }
+              @include md {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+
+        .slick-arrow {
+          font-size: 30px;
+          cursor: pointer;
+          position: absolute;
+        }
+        .prevArro {
+          position: absolute;
+          left: -0.5rem;
+          width: auto;
+          top: 48%;
+          font-size: 16px;
+          z-index: 10;
+          cursor: pointer;
+          color: #104124;
+        }
+        .nextArro {
+          position: absolute;
+          right: -0.5rem;
+          width: auto;
+          top: 48%;
+          font-size: 16px;
+          z-index: 10;
+          cursor: pointer;
+          color: #104124;
+        }
+      }
+
+      .subSlider {
+        width: 40%;
+        margin: auto;
+        @include xsm {
+          width: 100%;
+        }
+        @include sm {
+          width: 100%;
+        }
+        @include md {
+          width: 90%;
+        }
+        @include l {
+          width: 80%;
+        }
+        @include xl {
+          width: 70%;
+        }
+        @include xxl {
+          width: 60%;
+        }
+        @include xxxl {
+          width: 50%;
+        }
+        .row {
+          .col-md-4 {
+            .slider-main-s {
+              background: #fff;
+              margin: 1.5rem 0.5rem;
+              padding: 0.5rem;
+              border-radius: 30px;
+              .logo {
+                width: 44px;
+                margin-bottom: 1rem;
+              }
+              .thumb {
+                width: 100%;
+              }
+              .news-title {
+                font-size: 13px;
+                font-weight: 700;
+                color: #000;
+                margin-top: 1rem;
+                margin-bottom: 5px;
+              }
+              .subTitle {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-ten-two {
+    padding-bottom: 6rem;
+    display: flex;
+    background-color: $gray-col;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 99%;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      object-fit: contain;
+      margin-top: -6rem;
+      margin-bottom: 3rem;
+    }
+    h3 {
+      font-weight: 700;
+      color: #000;
+    }
+    .partner-box {
+      width: 100%;
+      padding: 0 2rem;
+      margin-top: 2rem;
+      .row {
+        .col-md-3 {
+          .p-main-box {
+            width: 100%;
+            height: 150px;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: $commn-box-shadow;
+            transition-duration: 0.3s;
+            &:hover {
+              box-shadow: none;
+            }
+
+            @include xsm {
+              margin: 0.5rem 0;
+            }
+            @include sm {
+              margin: 1rem 0;
+            }
+            @include md {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

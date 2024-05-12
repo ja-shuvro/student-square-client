@@ -1,0 +1,172 @@
+@import "./variabls";
+.custom-container {
+  margin: auto;
+  padding: 1rem;
+  color: #000;
+  &.notice-bord-page {
+    .top-filter-section {
+      h1 {
+        @include sectionHead;
+        margin: 3rem 0;
+        .one {
+          @include green;
+        }
+        .two {
+          @include ppl;
+        }
+
+        @include xsm {
+          font-size: 35px;
+        }
+        @include md {
+          font-size: 45px;
+        }
+        @include l {
+          font-size: 75px;
+        }
+      }
+      .filter-main-section {
+        form {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 2rem 0;
+          flex-wrap: wrap;
+          select {
+            box-shadow: none;
+            border: 1px solid #712df94a;
+            margin: 0.5rem;
+            font-weight: 500;
+
+            @include xsm {
+              width: 100%;
+            }
+            @include md {
+              width: 45%;
+            }
+            @include l {
+              width: auto;
+            }
+            option {
+              width: 100%;
+            }
+          }
+          button {
+            box-shadow: none;
+            background-color: $ppl-col;
+            color: #fff;
+            margin: 0 0.5rem;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .n-card-section {
+        padding: 0 1rem;
+        @include xsm {
+          padding: 0;
+        }
+        @include md {
+          padding: 0 1rem;
+        }
+        .pages {
+          p {
+            text-align: right;
+            @include xsm {
+              text-align: center;
+            }
+            @include md {
+              text-align: right;
+            }
+            strong {
+              margin-right: 0.3rem;
+            }
+          }
+        }
+        .row {
+          .col-md-3 {
+            @include md {
+              width: 50%;
+            }
+            @include l {
+              width: 25%;
+            }
+            .each-card {
+              margin: 1rem 0;
+              .card {
+                .card-body {
+                  .card-title {
+                    @include xsm {
+                      font-size: 16px;
+                    }
+                    @include md {
+                      font-size: 18px;
+                    }
+                    @include l {
+                      font-size: 20px;
+                    }
+                  }
+                  .card-text {
+                    @include xsm {
+                      font-size: 12px;
+                    }
+                    @include md {
+                      font-size: 14px;
+                    }
+                    @include l {
+                      font-size: 16px;
+                    }
+                  }
+                  .card-footer-scetion {
+                    display: flex;
+                    justify-content: space-between;
+                    border-top: 1px solid $gray-col;
+                    padding-top: 1rem;
+                    .coun {
+                    }
+                    .days {
+                      color: #0000006b;
+                      i {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .pagination-c {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+
+        ul {
+          li {
+            &.active {
+              .page-link {
+                background: #14a44d2e;
+                color: $green-col;
+              }
+            }
+            .page-link {
+              width: 36px;
+              height: 36px;
+              border-radius: 99%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              &:focus {
+                background: #14a44d2e;
+                color: $green-col;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Single Blog Post - Student Square</title>
+    <link
+      rel="shortcut icon"
+      href="/src/img/SSsiteIcon.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="/src/css/prev-blog-slider.css" />
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <!-- Navbar-->
+     <%- include('./partials/navbar.ejs') %>
+    <!-- Navbar -->
+    <!-- Main Content Start -->
+    <div class="custom-container single-blog-page">
+      <div class="s-b-main-page">
+        <div class="bannar-section">
+          <img loading="lazy" decoding="async" src="<%= featuredImg.media_details.sizes.full.source_url %>" alt="<%= post.title.rendered %>" />
+          <div class="dis-sectio">
+          <p href="#" class="tag">
+            <i class="fas fa-caret-left"></i>
+            <% tags.forEach(tag => { %>
+              <a href="#"><%= tag %></a>
+              <% if(tag !== tags[tags.length - 1]) { %>, <% } %> 
+            <% }); %>
+          </p>
+
+            <h1>
+              <%= post.title.rendered %>
+            </h1>
+          </div>
+        </div>
+
+        <div class="post-admin">
+          <p class="post-details">
+            <span class="date">
+            <% 
+              const dateObj = new Date(post.date);
+              
+              const formattedDate = dateObj.toLocaleString('en-US', {
+                month: 'long', 
+                day: 'numeric', 
+                year: 'numeric' 
+              });
+              
+              const finalDate = `${formattedDate}`;
+              %> 
+              <%= finalDate %> BY
+          </span>
+            <span class="user-name" style=''><%= author.name %></span>
+          </p>
+          <p class="reading-time">Reading Time: 4 minutes</p>
+
+          <h2>
+            <%- post.excerpt.rendered%>
+          </h2>
+        </div>
+
+        <div class="content-section">
+          <%- post.content.rendered%>
+
+
+          <div class="share-blog">
+            <div class="social-share">
+              <!-- Facebook -->
+              <a
+                class="btn btn-primary"
+                style="background-color: #3b5998"
+                href="#!"
+                role="button"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+
+              <!-- Twitter -->
+              <a
+                class="btn btn-primary"
+                style="background-color: #55acee"
+                href="#!"
+                role="button"
+                ><i class="fab fa-twitter"></i
+              ></a>
+
+              <!-- Instagram -->
+              <a
+                class="btn btn-primary"
+                style="background-color: #ac2bac"
+                href="#!"
+                role="button"
+                ><i class="fab fa-instagram"></i
+              ></a>
+
+              <!-- Linkedin -->
+              <a
+                class="btn btn-primary"
+                style="background-color: #0082ca"
+                href="#!"
+                role="button"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+
+              <!-- Whatsapp -->
+              <a
+                class="btn btn-primary"
+                style="background-color: #25d366"
+                href="#!"
+                role="button"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="comment-section my-4">
+            <section style="background-color: #eee">
+              <div class="container my-5 py-5">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-md-12 col-lg-10 col-xl-8">
+                    <div class="card">
+                      <section>
+                        <div class="container my-5 py-5 text-dark">
+                          <div class="row d-flex justify-content-center">
+                            <div>
+                              <div class="d-flex flex-start mb-4">
+                                <img
+                                  class="rounded-circle shadow-1-strong me-3"
+                                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp"
+                                  alt="avatar"
+                                  width="65"
+                                  height="65"
+                                />
+                                <div class="card w-100">
+                                  <div class="card-body p-4">
+                                    <div class="">
+                                      <h5>Johny Cash</h5>
+                                      <p class="small">3 hours ago</p>
+                                      <p>
+                                        Cras sit amet nibh libero, in gravida
+                                        nulla. Nulla vel metus scelerisque ante
+                                        sollicitudin. Cras purus odio,
+                                        vestibulum in vulputate at, tempus
+                                        viverra turpis. Fusce condimentum nunc
+                                        ac nisi vulputate fringilla. Donec
+                                        lacinia congue felis in faucibus ras
+                                        purus odio, vestibulum in vulputate at,
+                                        tempus viverra turpis.
+                                      </p>
+
+                                      <div
+                                        class="d-flex justify-content-between align-items-center"
+                                      >
+                                        <div class="d-flex align-items-center">
+                                          <a href="#!" class="link-muted me-2"
+                                            ><i
+                                              class="fas fa-thumbs-up me-1"
+                                            ></i
+                                            >132</a
+                                          >
+                                          <a href="#!" class="link-muted"
+                                            ><i
+                                              class="fas fa-thumbs-down me-1"
+                                            ></i
+                                            >15</a
+                                          >
+                                        </div>
+                                        <a href="#!" class="link-muted"
+                                          ><i class="fas fa-reply me-1"></i>
+                                          Reply</a
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="d-flex flex-start">
+                                <img
+                                  class="rounded-circle shadow-1-strong me-3"
+                                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(31).webp"
+                                  alt="avatar"
+                                  width="65"
+                                  height="65"
+                                />
+                                <div class="card w-100">
+                                  <div class="card-body p-4">
+                                    <div class="">
+                                      <h5>Mindy Campbell</h5>
+                                      <p class="small">5 hours ago</p>
+                                      <p>
+                                        Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Delectus cumque
+                                        doloribus dolorum dolor repellat nemo
+                                        animi at iure autem fuga cupiditate
+                                        architecto ut quam provident neque,
+                                        inventore nisi eos quas?
+                                      </p>
+
+                                      <div
+                                        class="d-flex justify-content-between align-items-center"
+                                      >
+                                        <div class="d-flex align-items-center">
+                                          <a href="#!" class="link-muted me-2"
+                                            ><i
+                                              class="fas fa-thumbs-up me-1"
+                                            ></i
+                                            >158</a
+                                          >
+                                          <a href="#!" class="link-muted"
+                                            ><i
+                                              class="fas fa-thumbs-down me-1"
+                                            ></i
+                                            >13</a
+                                          >
+                                        </div>
+                                        <a href="#!" class="link-muted"
+                                          ><i class="fas fa-reply me-1"></i>
+                                          Reply</a
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <div
+                        class="card-footer py-3 border-0"
+                        style="background-color: #f8f9fa"
+                      >
+                        <div class="d-flex flex-start w-100">
+                          <img
+                            class="rounded-circle shadow-1-strong me-3"
+                            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp"
+                            alt="avatar"
+                            width="40"
+                            height="40"
+                          />
+                          <div class="form-outline w-100">
+                            <textarea
+                              class="form-control"
+                              id="textAreaExample"
+                              rows="4"
+                              style="background: #fff"
+                            ></textarea>
+                            <label class="form-label" for="textAreaExample"
+                              >Message</label
+                            >
+                          </div>
+                        </div>
+                        <div class="float-end mt-2 pt-1 commnet-button">
+                          <button
+                            type="button"
+                            class="btn btn-sm post-comment text-white bg-success"
+                          >
+                            Post comment
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-sm bg-danger text-white"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="suggested-story-section">
+            <div class="n-card-section">
+              <div class="s-s-title">
+                <h1>suggested stories</h1>
+              </div>
+              <div class="row">
+
+              <% posts.forEach(eachPost => { %>
+
+                <div class="col-md-3">
+                  <div class="each-card">
+                    <div class="card">
+                      <div
+                        class="bg-image hover-overlay ripple"
+                        data-mdb-ripple-color="light"
+                      >
+                        <img
+                          src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                          class="img-fluid"
+                        />
+                        <a href="#!">
+                          <div
+                            class="mask"
+                            style="background-color: #fbfbfb26"
+                          ></div>
+                        </a>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title"><%= eachPost.title.rendered%></h5>
+                        <div class="card-text">
+                         <%= eachPost.excerpt.rendered%>
+                        </div>
+                        <div class="card-footer-scetion">
+                          <p class="coun">Bangladesh</p>
+                          <p class="days">
+                            <i class="far fa-hourglass-half"></i>
+                            15 Days
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <% }); %>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer  -->
+    <%- include('./partials/footer.ejs') %>
+    <!-- Main Content End  -->
+    <!-- End your project here-->
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
+    <!-- MDB core JavaScript -->
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+    ></script>
+
+    <!-- Your custom scripts (optional) -->
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

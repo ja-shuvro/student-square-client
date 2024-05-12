@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Notice Board - Student Square</title>
+    <link
+      rel="shortcut icon"
+      href="/src/img/SSsiteIcon.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="/src/css/prev-blog-slider.css" />
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <!-- Navbar-->
+     <%- include('./partials/navbar.ejs') %>
+    <!-- Navbar -->
+    <div class="custom-container notice-bord-page">
+      <div class="top-filter-section">
+        <h1>Notice Board</h1>
+        <div class="filter-main-section">
+          <form action="" method="get">
+            <select name="_sft_category[]" class="btn" title="">
+              <option
+                class="sf-level-0 sf-item-0"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value=""
+              >
+                Any Opportunity
+              </option>
+              <option
+                class="sf-level-0 sf-item-2"
+                data-sf-count="19"
+                data-sf-depth="0"
+                value="competitions"
+              >
+                Competitions&nbsp;&nbsp;(19)
+              </option>
+              <option
+                class="sf-level-1 sf-item-3"
+                data-sf-count="13"
+                data-sf-depth="1"
+                value="awards"
+              >
+                &nbsp;&nbsp;&nbsp;Awards&nbsp;&nbsp;(13)
+              </option>
+              <option
+                class="sf-level-1 sf-item-4"
+                data-sf-count="28"
+                data-sf-depth="1"
+                value="grants"
+              >
+                &nbsp;&nbsp;&nbsp;Grants&nbsp;&nbsp;(28)
+              </option>
+              <option
+                class="sf-level-0 sf-item-5 sf-option-active"
+                selected="selected"
+                data-sf-count="24"
+                data-sf-depth="0"
+                value="conferences"
+              >
+                Conferences&nbsp;&nbsp;(24)
+              </option>
+              <option
+                class="sf-level-0 sf-item-6"
+                data-sf-count="15"
+                data-sf-depth="0"
+                value="exchange-programs"
+              >
+                Exchange Programs&nbsp;&nbsp;(15)
+              </option>
+              <option
+                class="sf-level-0 sf-item-9"
+                data-sf-count="56"
+                data-sf-depth="0"
+                value="fellowships"
+              >
+                Fellowships&nbsp;&nbsp;(56)
+              </option>
+              <option
+                class="sf-level-0 sf-item-7"
+                data-sf-count="120"
+                data-sf-depth="0"
+                value="internships"
+              >
+                Internships&nbsp;&nbsp;(120)
+              </option>
+              <option
+                class="sf-level-0 sf-item-3354"
+                data-sf-count="15"
+                data-sf-depth="0"
+                value="jobs"
+              >
+                Jobs&nbsp;&nbsp;(15)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1"
+                data-sf-count="63"
+                data-sf-depth="0"
+                value="miscellaneous"
+              >
+                Miscellaneous&nbsp;&nbsp;(63)
+              </option>
+              <option
+                class="sf-level-0 sf-item-8"
+                data-sf-count="121"
+                data-sf-depth="0"
+                value="scholarships"
+              >
+                Scholarships&nbsp;&nbsp;(121)
+              </option>
+              <option
+                class="sf-level-1 sf-item-10"
+                data-sf-count="23"
+                data-sf-depth="1"
+                value="post-graduate"
+              >
+                &nbsp;&nbsp;&nbsp;Masters/Post Graduate&nbsp;&nbsp;(23)
+              </option>
+              <option
+                class="sf-level-1 sf-item-11"
+                data-sf-count="6"
+                data-sf-depth="1"
+                value="post-doctoral"
+              >
+                &nbsp;&nbsp;&nbsp;PhD/Post Doctoral&nbsp;&nbsp;(6)
+              </option>
+              <option
+                class="sf-level-1 sf-item-12"
+                data-sf-count="5"
+                data-sf-depth="1"
+                value="seasonal"
+              >
+                &nbsp;&nbsp;&nbsp;Summer School/Winter School&nbsp;&nbsp;(5)
+              </option>
+              <option
+                class="sf-level-1 sf-item-13"
+                data-sf-count="6"
+                data-sf-depth="1"
+                value="undergraduate"
+              >
+                &nbsp;&nbsp;&nbsp;Undergraduate&nbsp;&nbsp;(6)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1471"
+                data-sf-count="14"
+                data-sf-depth="0"
+                value="sdg"
+              >
+                SDG&nbsp;&nbsp;(14)
+              </option>
+              <option
+                class="sf-level-0 sf-item-7496"
+                data-sf-count="1"
+                data-sf-depth="0"
+                value="voluntary"
+              >
+                Voluntary&nbsp;&nbsp;(1)
+              </option>
+              <option
+                class="sf-level-0 sf-item-14"
+                data-sf-count="22"
+                data-sf-depth="0"
+                value="workshops"
+              >
+                Workshops&nbsp;&nbsp;(22)
+              </option>
+            </select>
+
+            <select name="_sft_regions[]" class="btn" title="">
+              <option
+                class="sf-level-0 sf-item-0 sf-option-active"
+                selected="selected"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value=""
+              >
+                Any Region
+              </option>
+              <option
+                class="sf-level-0 sf-item-1085"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="adb-member-countries"
+              >
+                ADB Member Countries&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1020"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="afghanistan"
+              >
+                Afghanistan&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-2034"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="africa"
+              >
+                Africa&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1083"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="african-countries"
+              >
+                African Countries&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1110"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="albania"
+              >
+                Albania&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1365"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="algeria"
+              >
+                Algeria&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1013"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="argentina"
+              >
+                Argentina&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-5554"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="asean-region"
+              >
+                ASEAN region&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-2033"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="asia"
+              >
+                Asia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1044"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="australia"
+              >
+                Australia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1258"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="austria"
+              >
+                Austria&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1029"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="azerbaijan"
+              >
+                Azerbaijan&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1860"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="bahrain"
+              >
+                Bahrain&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1097"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="bangladesh"
+              >
+                Bangladesh&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1038"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="belgium"
+              >
+                Belgium&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-28"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="belize"
+              >
+                Belize&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-4290"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="bolivia"
+              >
+                Bolivia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-104"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="brasil"
+              >
+                Brasil&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-105"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="brazil"
+              >
+                Brazil&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1010"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="brunei"
+              >
+                Brunei&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1270"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="brunei-darussalam"
+              >
+                Brunei Darussalam&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1018"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="cambodia"
+              >
+                Cambodia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-78"
+                data-sf-count="2"
+                data-sf-depth="0"
+                value="canada"
+              >
+                Canada&nbsp;&nbsp;(2)
+              </option>
+              <option
+                class="sf-level-0 sf-item-6330"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="caribbean"
+              >
+                Caribbean&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-66"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="china"
+              >
+                China&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1307"
+                data-sf-count="1"
+                data-sf-depth="0"
+                value="colombia"
+              >
+                Colombia&nbsp;&nbsp;(1)
+              </option>
+              <option
+                class="sf-level-0 sf-item-23"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="commonwealth-countries"
+              >
+                Commonwealth Countries&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1315"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="cote-divoire"
+              >
+                Côte d’Ivoire&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1088"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="croatia"
+              >
+                Croatia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1273"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="cyprus"
+              >
+                Cyprus&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-68"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="czech-republic"
+              >
+                Czech Republic&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-6603"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="democratic-republic-of-the"
+              >
+                Democratic Republic of the&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-6604"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="democratic-republic-of-the-congo"
+              >
+                Democratic Republic of the Congo&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1238"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="denmark"
+              >
+                Denmark&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-29"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="dominica"
+              >
+                Dominica&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1096"
+                data-sf-count="1"
+                data-sf-depth="0"
+                value="egypt"
+              >
+                Egypt&nbsp;&nbsp;(1)
+              </option>
+              <option
+                class="sf-level-0 sf-item-2044"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="england"
+              >
+                England&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1242"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="estonia"
+              >
+                Estonia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-3353"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="ethiopia"
+              >
+                Ethiopia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-6079"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="europe"
+              >
+                Europe&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-83"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="fiji"
+              >
+                Fiji&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-41"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="finland"
+              >
+                Finland&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1078"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="flanders"
+              >
+                Flanders&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-74"
+                data-sf-count="1"
+                data-sf-depth="0"
+                value="france"
+              >
+                France&nbsp;&nbsp;(1)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1121"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="georgia"
+              >
+                Georgia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-59"
+                data-sf-count="2"
+                data-sf-depth="0"
+                value="germany"
+              >
+                Germany&nbsp;&nbsp;(2)
+              </option>
+              <option
+                class="sf-level-0 sf-item-2043"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="ghana"
+              >
+                Ghana&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1062"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="greece"
+              >
+                Greece&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-30"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="grenada"
+              >
+                Grenada&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1098"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="hong-kong"
+              >
+                Hong Kong&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-57"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="hungary"
+              >
+                Hungary&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1366"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="iceland"
+              >
+                Iceland&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1100"
+                data-sf-count="1"
+                data-sf-depth="0"
+                value="india"
+              >
+                India&nbsp;&nbsp;(1)
+              </option>
+              <option
+                class="sf-level-0 sf-item-54"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="indonesia"
+              >
+                Indonesia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1350"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="iran"
+              >
+                Iran&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1068"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="ireland"
+              >
+                Ireland&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-94"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="italy"
+              >
+                Italy&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-31"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="jamaica"
+              >
+                Jamaica&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-53"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="japan"
+              >
+                Japan&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1389"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="jordan"
+              >
+                Jordan&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1211"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="kenya"
+              >
+                kenya&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1134"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="kyrgyzstan"
+              >
+                Kyrgyzstan&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1271"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="laos"
+              >
+                Laos&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-71"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="latvia"
+              >
+                Latvia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-46"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="lithuania"
+              >
+                Lithuania&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-61"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="local-community"
+              >
+                Local Community&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1131"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="luxembourg"
+              >
+                Luxembourg&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1130"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="luxemburg"
+              >
+                Luxemburg&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1032"
+                data-sf-count="1"
+                data-sf-depth="0"
+                value="malaysia"
+              >
+                Malaysia&nbsp;&nbsp;(1)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1048"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="malta"
+              >
+                Malta&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-3386"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="mauritania"
+              >
+                Mauritania&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-101"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="mauritius"
+              >
+                Mauritius&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1123"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="mexico"
+              >
+                Mexico&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-4592"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="mongolia"
+              >
+                Mongolia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-45"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="morocco"
+              >
+                Morocco&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1099"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="myanmar"
+              >
+                Myanmar&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-48"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="nepal"
+              >
+                Nepal&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1059"
+                data-sf-count="1"
+                data-sf-depth="0"
+                value="netherlands"
+              >
+                Netherlands&nbsp;&nbsp;(1)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1065"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="new-zealand"
+              >
+                New Zealand&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-86"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="nigeria"
+              >
+                Nigeria&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-6080"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="north-america"
+              >
+                North America&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-81"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="norway"
+              >
+                Norway&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-37"
+                data-sf-count="6"
+                data-sf-depth="0"
+                value="online"
+              >
+                Online&nbsp;&nbsp;(6)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1185"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="pakistan"
+              >
+                Pakistan&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1193"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="peru"
+              >
+                Peru&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1007"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="philippines"
+              >
+                Philippines&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-92"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="poland"
+              >
+                Poland&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-51"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="portugal"
+              >
+                Portugal&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1146"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="qatar"
+              >
+                Qatar&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1208"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="romania"
+              >
+                Romania&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1133"
+                data-sf-count="1"
+                data-sf-depth="0"
+                value="russia"
+              >
+                Russia&nbsp;&nbsp;(1)
+              </option>
+              <option
+                class="sf-level-0 sf-item-3163"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="rwanda"
+              >
+                Rwanda&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-32"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="saint-lucia"
+              >
+                Saint Lucia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-33"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="saint-vincent-and-the-grenadines"
+              >
+                Saint Vincent and the Grenadines&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1190"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="saudi-arabia"
+              >
+                Saudi Arabia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1091"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="scotland"
+              >
+                Scotland&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-7610"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="senagal"
+              >
+                Senagal&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-73"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="singapore"
+              >
+                Singapore&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1015"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="slovakia"
+              >
+                Slovakia&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-85"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="south-africa"
+              >
+                South Africa&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-67"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="south-korea"
+              >
+                South Korea&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-95"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="spain"
+              >
+                Spain&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1084"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="sri-lanka"
+              >
+                Sri Lanka&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-34"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="suriname"
+              >
+                Suriname&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1112"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="sweden"
+              >
+                Sweden&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1049"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="switzerland"
+              >
+                Switzerland&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1103"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="taiwan"
+              >
+                Taiwan&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-38"
+                data-sf-count="1"
+                data-sf-depth="0"
+                value="thailand"
+              >
+                Thailand&nbsp;&nbsp;(1)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1379"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="timor-leste"
+              >
+                Timor-Leste&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-111"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="turkey"
+              >
+                Turkey&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1304"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="uganda"
+              >
+                Uganda&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1042"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="uk"
+              >
+                UK&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-63"
+                data-sf-count="1"
+                data-sf-depth="0"
+                value="united-arab-emirates"
+              >
+                United Arab Emirates&nbsp;&nbsp;(1)
+              </option>
+              <option
+                class="sf-level-0 sf-item-21"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="united-kingdom"
+              >
+                United Kingdom&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-43"
+                data-sf-count="1"
+                data-sf-depth="0"
+                value="united-states"
+              >
+                United States&nbsp;&nbsp;(1)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1026"
+                data-sf-count="1"
+                data-sf-depth="0"
+                value="uzbekistan"
+              >
+                Uzbekistan&nbsp;&nbsp;(1)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1101"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="vietnam"
+              >
+                Vietnam&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1851"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="wharton-schools-zicklin-center-for-business-ethics-research"
+              >
+                Wharton School’s Zicklin Center for Business Ethics
+                Research&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-7611"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="yemen"
+              >
+                Yemen&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0 sf-item-1279"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="zambia"
+              >
+                Zambia&nbsp;&nbsp;(0)
+              </option>
+            </select>
+
+            <select name="_sfm_funding-type[]" class="btn" title="">
+              <option
+                class="sf-level-0 sf-item-0 sf-option-active"
+                selected="selected"
+                data-sf-depth="0"
+                value=""
+              >
+                Any Funding Type
+              </option>
+              <option
+                class="sf-level-0"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="Full Scholarship"
+              >
+                Full Scholarship&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0"
+                data-sf-count="1"
+                data-sf-depth="0"
+                value="Fully Funded"
+              >
+                Fully Funded&nbsp;&nbsp;(1)
+              </option>
+              <option
+                class="sf-level-0"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="Paid"
+              >
+                Paid&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="Partial Scholarship"
+              >
+                Partial Scholarship&nbsp;&nbsp;(0)
+              </option>
+              <option
+                class="sf-level-0"
+                data-sf-count="5"
+                data-sf-depth="0"
+                value="Partially Funded"
+              >
+                Partially Funded&nbsp;&nbsp;(5)
+              </option>
+              <option
+                class="sf-level-0"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="Voluntarily"
+              >
+                Voluntarily&nbsp;&nbsp;(0)
+              </option>
+            </select>
+
+            <select name="_deadline" class="btn" title="">
+              <option
+                class="sf-level-0 sf-item-0 sf-option-active"
+                selected="selected"
+                data-sf-depth="0"
+                value=""
+              >
+                Any Deadline
+              </option>
+              <option class="" id="" data-sf-depth="0" value="on-going">
+                On Going
+              </option>
+              <option
+                class="sf-level-0"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="1 Week"
+              >
+                1 Week
+              </option>
+              <option
+                class="sf-level-0"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="10 Days"
+              >
+                10 Days
+              </option>
+              <option
+                class="sf-level-0"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="15 Days"
+              >
+                15 Days
+              </option>
+              <option
+                class="sf-level-0"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="30 Days"
+              >
+                30 Days
+              </option>
+              <option
+                class="sf-level-0"
+                data-sf-count="0"
+                data-sf-depth="0"
+                value="2 Months"
+              >
+                2 Months
+              </option>
+            </select>
+
+            <button type="submit" class="btn">Explore</button>
+            <button type="reset" class="btn">Reste Filter</button>
+          </form>
+        </div>
+
+        <div class="n-card-section">
+          <div class="pages">
+            <p><strong>Page 1</strong>of 2</p>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="each-card">
+                <div class="card">
+                  <div
+                    class="bg-image hover-overlay ripple"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                      class="img-fluid"
+                    />
+                    <a href="#!">
+                      <div
+                        class="mask"
+                        style="background-color: #fbfbfb26"
+                      ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="card-footer-scetion">
+                      <p class="coun">Bangladesh</p>
+                      <p class="days">
+                        <i class="far fa-hourglass-half"></i>
+                        15 Days
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="each-card">
+                <div class="card">
+                  <div
+                    class="bg-image hover-overlay ripple"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                      class="img-fluid"
+                    />
+                    <a href="#!">
+                      <div
+                        class="mask"
+                        style="background-color: #fbfbfb26"
+                      ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="card-footer-scetion">
+                      <p class="coun">Bangladesh</p>
+                      <p class="days">
+                        <i class="far fa-hourglass-half"></i>
+                        15 Days
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="each-card">
+                <div class="card">
+                  <div
+                    class="bg-image hover-overlay ripple"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                      class="img-fluid"
+                    />
+                    <a href="#!">
+                      <div
+                        class="mask"
+                        style="background-color: #fbfbfb26"
+                      ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="card-footer-scetion">
+                      <p class="coun">Bangladesh</p>
+                      <p class="days">
+                        <i class="far fa-hourglass-half"></i>
+                        15 Days
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="each-card">
+                <div class="card">
+                  <div
+                    class="bg-image hover-overlay ripple"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                      class="img-fluid"
+                    />
+                    <a href="#!">
+                      <div
+                        class="mask"
+                        style="background-color: #fbfbfb26"
+                      ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="card-footer-scetion">
+                      <p class="coun">Bangladesh</p>
+                      <p class="days">
+                        <i class="far fa-hourglass-half"></i>
+                        15 Days
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="each-card">
+                <div class="card">
+                  <div
+                    class="bg-image hover-overlay ripple"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                      class="img-fluid"
+                    />
+                    <a href="#!">
+                      <div
+                        class="mask"
+                        style="background-color: #fbfbfb26"
+                      ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="card-footer-scetion">
+                      <p class="coun">Bangladesh</p>
+                      <p class="days">
+                        <i class="far fa-hourglass-half"></i>
+                        15 Days
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="each-card">
+                <div class="card">
+                  <div
+                    class="bg-image hover-overlay ripple"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                      class="img-fluid"
+                    />
+                    <a href="#!">
+                      <div
+                        class="mask"
+                        style="background-color: #fbfbfb26"
+                      ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="card-footer-scetion">
+                      <p class="coun">Bangladesh</p>
+                      <p class="days">
+                        <i class="far fa-hourglass-half"></i>
+                        15 Days
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="each-card">
+                <div class="card">
+                  <div
+                    class="bg-image hover-overlay ripple"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                      class="img-fluid"
+                    />
+                    <a href="#!">
+                      <div
+                        class="mask"
+                        style="background-color: #fbfbfb26"
+                      ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="card-footer-scetion">
+                      <p class="coun">Bangladesh</p>
+                      <p class="days">
+                        <i class="far fa-hourglass-half"></i>
+                        15 Days
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="each-card">
+                <div class="card">
+                  <div
+                    class="bg-image hover-overlay ripple"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                      class="img-fluid"
+                    />
+                    <a href="#!">
+                      <div
+                        class="mask"
+                        style="background-color: #fbfbfb26"
+                      ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="card-footer-scetion">
+                      <p class="coun">Bangladesh</p>
+                      <p class="days">
+                        <i class="far fa-hourglass-half"></i>
+                        15 Days
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="each-card">
+                <div class="card">
+                  <div
+                    class="bg-image hover-overlay ripple"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                      class="img-fluid"
+                    />
+                    <a href="#!">
+                      <div
+                        class="mask"
+                        style="background-color: #fbfbfb26"
+                      ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="card-footer-scetion">
+                      <p class="coun">Bangladesh</p>
+                      <p class="days">
+                        <i class="far fa-hourglass-half"></i>
+                        15 Days
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="each-card">
+                <div class="card">
+                  <div
+                    class="bg-image hover-overlay ripple"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                      class="img-fluid"
+                    />
+                    <a href="#!">
+                      <div
+                        class="mask"
+                        style="background-color: #fbfbfb26"
+                      ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="card-footer-scetion">
+                      <p class="coun">Bangladesh</p>
+                      <p class="days">
+                        <i class="far fa-hourglass-half"></i>
+                        15 Days
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="each-card">
+                <div class="card">
+                  <div
+                    class="bg-image hover-overlay ripple"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                      class="img-fluid"
+                    />
+                    <a href="#!">
+                      <div
+                        class="mask"
+                        style="background-color: #fbfbfb26"
+                      ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="card-footer-scetion">
+                      <p class="coun">Bangladesh</p>
+                      <p class="days">
+                        <i class="far fa-hourglass-half"></i>
+                        15 Days
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="each-card">
+                <div class="card">
+                  <div
+                    class="bg-image hover-overlay ripple"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                      class="img-fluid"
+                    />
+                    <a href="#!">
+                      <div
+                        class="mask"
+                        style="background-color: #fbfbfb26"
+                      ></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="card-footer-scetion">
+                      <p class="coun">Bangladesh</p>
+                      <p class="days">
+                        <i class="far fa-hourglass-half"></i>
+                        15 Days
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination-c">
+          <nav aria-label="...">
+            <ul class="pagination pagination-circle">
+              <li class="page-item">
+                <a class="page-link"><i class="fas fa-angles-left"></i></a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#"
+                  >2 <span class="visually-hidden">(current)</span></a
+                >
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#"
+                  ><i class="fas fa-angles-right"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- Main Content Start -->
+
+    <!-- Footer  -->
+    <%- include('./partials/footer.ejs') %>
+    <!-- Main Content End  -->
+
+    <!-- End your project here-->
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
+    <!-- MDB core JavaScript -->
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+    ></script>
+
+    <!-- Your custom scripts (optional) -->
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

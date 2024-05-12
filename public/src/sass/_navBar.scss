@@ -1,0 +1,185 @@
+@import "./variabls";
+@mixin menuGlassE {
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+}
+
+.c-main-nav {
+  padding: 1rem;
+  @include xsm {
+    padding: 0.3rem 0.5rem;
+  }
+  @include md {
+    padding: 0.4rem 0.8rem;
+  }
+  @include l {
+    padding: 0.3rem 1rem;
+  }
+  .c-left-nav {
+    @include xsm {
+      width: 40%;
+    }
+    @include l {
+      width: auto;
+    }
+    .navbar-brand {
+      img {
+        @include md {
+          width: 120px;
+          height: 35px;
+        }
+        @include xxl {
+          width: 200px;
+          height: 65px;
+        }
+      }
+    }
+  }
+
+  .nav-center {
+    a {
+      transition-duration: 300ms;
+
+      &:hover {
+        color: red !important;
+      }
+      &:active {
+        color: red !important;
+      }
+      &:focus {
+        color: red !important;
+      }
+    }
+    @include xsm {
+      width: 40%;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 0rem;
+      .navbar-collapse {
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        z-index: 12;
+        background: #fff;
+        right: 0;
+        padding: 1rem;
+      }
+    }
+    @include l {
+      width: auto;
+      margin: auto;
+      .navbar-collapse {
+        position: unset;
+      }
+    }
+
+    .c-navbar-nav {
+      margin: auto;
+      .nav-item {
+        .nav-link {
+          color: #000;
+          font-weight: 700;
+          @include md {
+            color: #000;
+            font-weight: 700;
+            font-size: 10px;
+          }
+          @include xl {
+            color: #000;
+            font-weight: 700;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .c-right-nav {
+    @include xsm {
+      display: none;
+    }
+    @include md {
+      margin-right: 1rem;
+    }
+    @include l {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .c-left {
+        div {
+          button {
+            font-size: 14px;
+            font-weight: 600;
+
+            @include md {
+              font-size: 10px;
+              padding: 5px 10px;
+            }
+            @include md {
+              font-size: 14px;
+              padding: 10px 15px;
+            }
+          }
+          ul {
+            li {
+              a {
+                font-size: 14px;
+                font-weight: 600;
+                @include md {
+                  font-size: 10px;
+                }
+                @include md {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+        #search-button {
+          border-radius: 99%;
+          height: 3rem;
+          width: 2.4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          @include l {
+            padding: 5px;
+            height: 2rem;
+            width: 2rem;
+          }
+          @include l {
+            height: 3rem;
+            width: 3rem;
+            padding: 15px;
+          }
+        }
+      }
+
+      .c-right {
+        div {
+          display: flex;
+          flex-direction: column;
+
+          a {
+            margin: 5px 0;
+            font-size: 14px;
+            font-weight: 600;
+            @include md {
+              font-size: 10px;
+              padding: 5px 10px;
+            }
+            @include md {
+              font-size: 14px;
+              padding: 10px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

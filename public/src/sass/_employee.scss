@@ -1,0 +1,108 @@
+@import "./variabls";
+
+.custom-container {
+  margin: auto;
+  padding: 1rem;
+  &.employee-page {
+    .main-container {
+      margin: 2rem 0;
+      .employee {
+        .main-card {
+          @include memberCard;
+          @include memberInnerCard;
+          background-color: #fff;
+          padding: 0;
+          img {
+            @include memberCardImg;
+
+            @include xsm {
+              width: 80px;
+              height: 80px;
+            }
+            @include sm {
+              width: 120px;
+              height: 120px;
+            }
+            @include md {
+              width: 140px;
+              height: 140px;
+            }
+            @include l {
+              width: 180px;
+              height: 180px;
+            }
+            @include xl {
+              width: 200px;
+              height: 200px;
+            }
+          }
+          h2 {
+            @include xsm {
+              font-size: 16px;
+            }
+            @include md {
+              font-size: 18px;
+            }
+            @include l {
+              font-size: 20px;
+            }
+            @include xl {
+              font-size: 24px;
+            }
+          }
+          h4 {
+            color: #525252;
+            @include xsm {
+              font-size: 14px;
+            }
+            @include md {
+              font-size: 16px;
+            }
+            @include l {
+              font-size: 18px;
+            }
+            @include xl {
+              font-size: 20px;
+            }
+          }
+          p {
+            text-align: center;
+            // margin-top: 2rem;
+            @include xsm {
+              font-size: 10px;
+            }
+            @include md {
+              font-size: 12px;
+            }
+            @include l {
+              font-size: 14px;
+            }
+            @include xl {
+              font-size: 16px;
+            }
+          }
+
+          button {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            background-color: #c2ecc8;
+            &:hover {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+      .about-employee {
+        h3 {
+          font-size: 18px;
+
+          strong {
+            font-size: 24px;
+          }
+        }
+        p {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
