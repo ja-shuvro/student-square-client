@@ -2,9 +2,9 @@ const axios = require("axios");
 const getSpecificData = require("../../utils/getSpecificData");
 const BASE_URL = "https://studentsquare.org/ss-admin/p1";
 
-exports.blogs = async (req, res) => {
+exports.magazins = async (req, res) => {
   try {
-    let posts = await axios.get(BASE_URL + "/api/public/blogs/");
+    let posts = await axios.get(BASE_URL + "/api/public/magazins/");
 
     const thumbPromises = posts.data.allPost.map((post) =>
       getSpecificData(BASE_URL + "/api/public/thumbnails/" + post.thumb)
@@ -25,18 +25,18 @@ exports.blogs = async (req, res) => {
       pagination,
     };
 
-    res.render("./blogs.ejs", data);
+    res.render("./magazins.ejs", data);
   } catch (error) {
     console.log(error);
   }
 };
 
-exports.blog = async (req, res) => {
+exports.magazin = async (req, res) => {
   const { id } = req.params;
 
   try {
-    let posts = await axios.get(BASE_URL + "/api/public/blogs/");
-    let post = await axios.get(BASE_URL + "/api/public/blogs/" + id);
+    let posts = await axios.get(BASE_URL + "/api/public/magazins/");
+    let post = await axios.get(BASE_URL + "/api/public/magazins/" + id);
     const thumbs = await axios.get(
       BASE_URL + "/api/public/thumbnails/" + post.data.thumb
     );
@@ -74,7 +74,7 @@ exports.blog = async (req, res) => {
       peraThreeImg: peraThreeImg.data,
       // featuredImg: featuredImg.data,
     };
-    res.render("./single-blog.ejs", data);
+    res.render("./single-magazins.ejs", data);
   } catch (error) {
     console.log(error);
   }

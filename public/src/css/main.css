@@ -7652,3 +7652,29 @@ section {
   height: 100%;
   object-fit: cover;
 }
+#_pagination {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#_pagination .page-item .page-link.prev-btn,
+#_pagination .page-item .page-link.next-btn {
+  background-color: #00652863;
+}
+#_pagination .page-item .page-link i {
+  font-size: 20px;
+}
+.img-fluid,
+.img-thumbnail {
+  width: 100%;
+  height: 265px;
+  object-fit: cover;
+}
+.custom-container.single-blog-page
+  .s-b-main-page
+  .content-section
+  .b-p-image
+  img {
+  height: 500px;
+}

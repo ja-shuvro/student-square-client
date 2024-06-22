@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Who We Are - Student Square</title>
+    <title>Parenting Advocacy - Student Square</title>
     <link
       rel="shortcut icon"
       href="/src/img/SSsiteIcon.png"
@@ -36,7 +36,7 @@
   <body>
     <!-- Start your project here-->
     <!-- Navbar-->
-     <%- include('./partials/navbar.ejs') %>
+    <%- include('./partials/navbar.ejs') %>
     <!-- Navbar -->
 
     <!-- Main Content Start -->
@@ -46,212 +46,46 @@
       <div class="our-bord-section">
         <div class="o-bord-sec">
           <h1><span class="one">Our</span> <span class="two">Board</span></h1>
+          <% posts.forEach((post, index) => { %>
+            <% if (post.designation.toLowerCase() === 'ceo') { %>
+              <div class="big-card">
+                <a href="/employee/<%= post.id %>" class="main-card">
+                  <img
+                    src="https://studentsquare.org/ss-admin<%= displayPicture[index].img.replace('public','') %>"
+                    alt="<%=post.name%>"
+                    srcset=""
+                  />
+                  <h3><%=post.name%></h3>
+                  <h4><%=post.designation%></h4>
+                  <h4><%=post.education%></h4>
+                  <p>
+                    <%= post.about.length <= 300 ? post.about : post.about.slice(0, 600) + '...' %>
+                  </p>
+                </a>
+              </div>
+            <% } %>
+          <% }); %>
 
-          <div class="big-card">
-            <a href="/employee.html" class="main-card">
-              <img
-                src="https://www.educatingthefuture.org/wp-content/uploads/brizy/imgs/adam-profile-min-180x180x0x0x180x180x1672271411.png"
-                alt=""
-                srcset=""
-              />
-              <h3>Mr Adam Hegedus</h3>
-              <h4>Executive Director</h4>
-              <h4>Managing Director</h4>
-              <p>
-                Mr Adam Hegedus is the Co-Founder and Managing Director of
-                Educating The Future Australia. Adam received the UNSW Co-Op
-                Leadership Scholarship for a Bachelor of Commerce (Co-Op) Degree
-                at UNSW Sydney and is currently completing his Honours Program
-                within the Work and Organisational Studies at the University of
-                Sydney under an Ethics Scholarship. He has had professional
-                experience with Origin Energy, Westpac Group and Westpac
-                Foundation and Deloitte Social Impact Consulting. He has also
-                worked in the Indo-Pacific with Project Child Indonesia and with
-                the Ministry of Education HANDS Pre-School Programme
-                Timor-Leste, supported by the Department of Foreign Affairs and
-                Trade New Colombo Plan. He has completed his Governance
-                Essentials for NFP Directors with the Australian Institute of
-                Company Directors. He also speaks English, Hungarian,
-                Indonesian, and Tetun Dili.
-              </p>
-            </a>
-          </div>
           <div class="small-card">
             <div class="row">
+
+              <% posts.forEach((post, index) => { %>
               <div class="col-md-6">
-                <a href="/employee.html" class="main-s-card">
+                <a href="/employee/<%= post.id %>" class="main-s-card">
                   <img
-                    src="https://www.educatingthefuture.org/wp-content/uploads/brizy/imgs/adam-profile-min-180x180x0x0x180x180x1672271411.png"
-                    alt=""
+                    src="https://studentsquare.org/ss-admin<%= displayPicture[index].img.replace('public','') %>"
+                    alt="<%=post.name%>"
                     srcset=""
                   />
-                  <h3>Mr Adam Hegedus</h3>
-                  <h4>Executive Director</h4>
-                  <h4>Managing Director</h4>
+                  <h3><%=post.name%></h3>
+                  <h4><%=post.designation%></h4>
+                  <h4><%=post.education%></h4>
                   <p>
-                    Mr Adam Hegedus is the Co-Founder and Managing Director of
-                    Educating The Future Australia. Adam received the UNSW Co-Op
-                    Leadership Scholarship for a Bachelor of Commerce (Co-Op)
-                    Degree at UNSW Sydney and is currently completing his
-                    Honours Program within the Work and Organisational Studies
-                    at the University of Sydney under an Ethics Scholarship. He
-                    has had professional experience with Origin Energy, Westpac
-                    Group and Westpac Foundation and Deloitte Social Impact
-                    Consulting. He has also worked in the Indo-Pacific with
-                    Project Child Indonesia and with the Ministry of Education
-                    HANDS Pre-School Programme Timor-Leste, supported by the
-                    Department of Foreign Affairs and Trade New Colombo Plan. He
-                    has completed his Governance Essentials for NFP Directors
-                    with the Australian Institute of Company Directors. He also
-                    speaks English, Hungarian, Indonesian, and Tetun Dili.
+                    <%= post.about.length <= 300 ? post.about : post.about.slice(0, 600) + '...' %>
                   </p>
                 </a>
               </div>
-              <div class="col-md-6">
-                <a href="/employee.html" class="main-s-card">
-                  <img
-                    src="https://www.educatingthefuture.org/wp-content/uploads/brizy/imgs/adam-profile-min-180x180x0x0x180x180x1672271411.png"
-                    alt=""
-                    srcset=""
-                  />
-                  <h3>Mr Adam Hegedus</h3>
-                  <h4>Executive Director</h4>
-                  <h4>Managing Director</h4>
-                  <p>
-                    Mr Adam Hegedus is the Co-Founder and Managing Director of
-                    Educating The Future Australia. Adam received the UNSW Co-Op
-                    Leadership Scholarship for a Bachelor of Commerce (Co-Op)
-                    Degree at UNSW Sydney and is currently completing his
-                    Honours Program within the Work and Organisational Studies
-                    at the University of Sydney under an Ethics Scholarship. He
-                    has had professional experience with Origin Energy, Westpac
-                    Group and Westpac Foundation and Deloitte Social Impact
-                    Consulting. He has also worked in the Indo-Pacific with
-                    Project Child Indonesia and with the Ministry of Education
-                    HANDS Pre-School Programme Timor-Leste, supported by the
-                    Department of Foreign Affairs and Trade New Colombo Plan. He
-                    has completed his Governance Essentials for NFP Directors
-                    with the Australian Institute of Company Directors. He also
-                    speaks English, Hungarian, Indonesian, and Tetun Dili.
-                  </p>
-                </a>
-              </div>
-              <div class="col-md-6">
-                <a href="/employee.html" class="main-s-card">
-                  <img
-                    src="https://www.educatingthefuture.org/wp-content/uploads/brizy/imgs/adam-profile-min-180x180x0x0x180x180x1672271411.png"
-                    alt=""
-                    srcset=""
-                  />
-                  <h3>Mr Adam Hegedus</h3>
-                  <h4>Executive Director</h4>
-                  <h4>Managing Director</h4>
-                  <p>
-                    Mr Adam Hegedus is the Co-Founder and Managing Director of
-                    Educating The Future Australia. Adam received the UNSW Co-Op
-                    Leadership Scholarship for a Bachelor of Commerce (Co-Op)
-                    Degree at UNSW Sydney and is currently completing his
-                    Honours Program within the Work and Organisational Studies
-                    at the University of Sydney under an Ethics Scholarship. He
-                    has had professional experience with Origin Energy, Westpac
-                    Group and Westpac Foundation and Deloitte Social Impact
-                    Consulting. He has also worked in the Indo-Pacific with
-                    Project Child Indonesia and with the Ministry of Education
-                    HANDS Pre-School Programme Timor-Leste, supported by the
-                    Department of Foreign Affairs and Trade New Colombo Plan. He
-                    has completed his Governance Essentials for NFP Directors
-                    with the Australian Institute of Company Directors. He also
-                    speaks English, Hungarian, Indonesian, and Tetun Dili.
-                  </p>
-                </a>
-              </div>
-              <div class="col-md-6">
-                <a href="/employee.html" class="main-s-card">
-                  <img
-                    src="https://www.educatingthefuture.org/wp-content/uploads/brizy/imgs/adam-profile-min-180x180x0x0x180x180x1672271411.png"
-                    alt=""
-                    srcset=""
-                  />
-                  <h3>Mr Adam Hegedus</h3>
-                  <h4>Executive Director</h4>
-                  <h4>Managing Director</h4>
-                  <p>
-                    Mr Adam Hegedus is the Co-Founder and Managing Director of
-                    Educating The Future Australia. Adam received the UNSW Co-Op
-                    Leadership Scholarship for a Bachelor of Commerce (Co-Op)
-                    Degree at UNSW Sydney and is currently completing his
-                    Honours Program within the Work and Organisational Studies
-                    at the University of Sydney under an Ethics Scholarship. He
-                    has had professional experience with Origin Energy, Westpac
-                    Group and Westpac Foundation and Deloitte Social Impact
-                    Consulting. He has also worked in the Indo-Pacific with
-                    Project Child Indonesia and with the Ministry of Education
-                    HANDS Pre-School Programme Timor-Leste, supported by the
-                    Department of Foreign Affairs and Trade New Colombo Plan. He
-                    has completed his Governance Essentials for NFP Directors
-                    with the Australian Institute of Company Directors. He also
-                    speaks English, Hungarian, Indonesian, and Tetun Dili.
-                  </p>
-                </a>
-              </div>
-              <div class="col-md-6">
-                <a href="/employee.html" class="main-s-card">
-                  <img
-                    src="https://www.educatingthefuture.org/wp-content/uploads/brizy/imgs/adam-profile-min-180x180x0x0x180x180x1672271411.png"
-                    alt=""
-                    srcset=""
-                  />
-                  <h3>Mr Adam Hegedus</h3>
-                  <h4>Executive Director</h4>
-                  <h4>Managing Director</h4>
-                  <p>
-                    Mr Adam Hegedus is the Co-Founder and Managing Director of
-                    Educating The Future Australia. Adam received the UNSW Co-Op
-                    Leadership Scholarship for a Bachelor of Commerce (Co-Op)
-                    Degree at UNSW Sydney and is currently completing his
-                    Honours Program within the Work and Organisational Studies
-                    at the University of Sydney under an Ethics Scholarship. He
-                    has had professional experience with Origin Energy, Westpac
-                    Group and Westpac Foundation and Deloitte Social Impact
-                    Consulting. He has also worked in the Indo-Pacific with
-                    Project Child Indonesia and with the Ministry of Education
-                    HANDS Pre-School Programme Timor-Leste, supported by the
-                    Department of Foreign Affairs and Trade New Colombo Plan. He
-                    has completed his Governance Essentials for NFP Directors
-                    with the Australian Institute of Company Directors. He also
-                    speaks English, Hungarian, Indonesian, and Tetun Dili.
-                  </p>
-                </a>
-              </div>
-              <div class="col-md-6">
-                <a href="/employee.html" class="main-s-card">
-                  <img
-                    src="https://www.educatingthefuture.org/wp-content/uploads/brizy/imgs/adam-profile-min-180x180x0x0x180x180x1672271411.png"
-                    alt=""
-                    srcset=""
-                  />
-                  <h3>Mr Adam Hegedus</h3>
-                  <h4>Executive Director</h4>
-                  <h4>Managing Director</h4>
-                  <p>
-                    Mr Adam Hegedus is the Co-Founder and Managing Director of
-                    Educating The Future Australia. Adam received the UNSW Co-Op
-                    Leadership Scholarship for a Bachelor of Commerce (Co-Op)
-                    Degree at UNSW Sydney and is currently completing his
-                    Honours Program within the Work and Organisational Studies
-                    at the University of Sydney under an Ethics Scholarship. He
-                    has had professional experience with Origin Energy, Westpac
-                    Group and Westpac Foundation and Deloitte Social Impact
-                    Consulting. He has also worked in the Indo-Pacific with
-                    Project Child Indonesia and with the Ministry of Education
-                    HANDS Pre-School Programme Timor-Leste, supported by the
-                    Department of Foreign Affairs and Trade New Colombo Plan. He
-                    has completed his Governance Essentials for NFP Directors
-                    with the Australian Institute of Company Directors. He also
-                    speaks English, Hungarian, Indonesian, and Tetun Dili.
-                  </p>
-                </a>
-              </div>
+              <% }); %>
             </div>
           </div>
         </div>
