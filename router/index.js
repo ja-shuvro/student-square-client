@@ -3,6 +3,7 @@ const blogs = require("./blogs");
 const employee = require("./employee");
 const notices_bord = require("./notices-bord");
 const magazin = require("./magazin");
+const auth = require("./auth");
 
 module.exports = {
   homepage,
@@ -10,4 +11,5 @@ module.exports = {
   employee,
   notices_bord,
   magazin,
+  auth,
 };

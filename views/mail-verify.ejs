@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Email Verification | Student Square - Unveiling Success</title>
+    <link
+      rel="shortcut icon"
+      href="/src/img/SSsiteIcon.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="./src/css/main.css" />
+
+    <style>
+      .main-bg {
+        background: linear-gradient(222deg, #f0454d36, #049b4d27);
+        background-size: 400% 400%;
+
+        -webkit-animation: AnimationName 30s ease infinite;
+        -moz-animation: AnimationName 30s ease infinite;
+        animation: AnimationName 30s ease infinite;
+      }
+
+      @-webkit-keyframes AnimationName {
+        0% {
+          background-position: 92% 0%;
+        }
+        50% {
+          background-position: 9% 100%;
+        }
+        100% {
+          background-position: 92% 0%;
+        }
+      }
+      @-moz-keyframes AnimationName {
+        0% {
+          background-position: 92% 0%;
+        }
+        50% {
+          background-position: 9% 100%;
+        }
+        100% {
+          background-position: 92% 0%;
+        }
+      }
+      @keyframes AnimationName {
+        0% {
+          background-position: 92% 0%;
+        }
+        50% {
+          background-position: 9% 100%;
+        }
+        100% {
+          background-position: 92% 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="vh-100 main-bg">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-xl-10">
+            <div class="card" style="border-radius: 1rem">
+              <div class="row g-0">
+                <div class="col-md-6 col-lg-5 d-none d-md-block">
+                  <a href="/">
+                    <img
+                      src="/src/img/SSPortraitLogo.png"
+                      alt="login form"
+                      class="img-fluid"
+                      style="border-radius: 1rem 0 0 1rem; height: 100%"
+                    />
+                  </a>
+                </div>
+                <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                  <div class="card-body p-4 p-lg-5 text-black">
+                    <form id="verify-otp" action="/verify-otp" method="POST">
+                      <div class="d-flex align-items-center mb-3 pb-1">
+                        <i
+                          class="fas fa-cubes fa-2x me-3"
+                          style="color: #ff6219"
+                        ></i>
+                        <span class="h1 fw-bold mb-0">Verify your mail!</span>
+                      </div>
+
+                      <h5
+                        class="fw-normal mb-3 pb-3"
+                        style="letter-spacing: 1px"
+                      >
+                        A code has been sent to your email(<%= email %>).
+                        Complete your verification with that code. Thank you
+                      </h5>
+
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input
+                          type="text"
+                          name="otp"
+                          id="form2Example27"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="form2Example27"
+                          >Code</label
+                        >
+                      </div>
+                      <input type="hidden" name="email" value="<%= email %>" />
+
+                      <div class="pt-1 mb-4">
+                        <button
+                          class="btn btn-success btn-lg btn-block"
+                          type="submit"
+                        >
+                          Verify
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const BASE_URL = "http://studentsquare.org/ss-admin/p1";
+
+      document
+        .getElementById("verify-otp")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault(); // Prevent the default form submission
+
+          const formData = new FormData(this);
+          const data = {};
+
+          formData.forEach((value, key) => {
+            data[key] = value;
+          });
+
+          try {
+            const response = await fetch(BASE_URL + "/api/public/verify-otp", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+
+            const result = await response.json();
+            document.cookie = `token=${result.token}; path=/; max-age=3600`;
+            window.location.href = "/dashboard";
+          } catch (error) {
+            console.error("Error:", error);
+          }
+        });
+    </script>
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"
+    ></script>
+  </body>
+</html>

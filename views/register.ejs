@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Sign Up | Student Square - Unveiling Success</title>
+    <link
+      rel="shortcut icon"
+      href="./src/img/SSsiteIcon.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="./src/css/main.css" />
+
+    <style>
+      .main-bg {
+        background: linear-gradient(222deg, #f0454d36, #049b4d27);
+        background-size: 400% 400%;
+
+        -webkit-animation: AnimationName 30s ease infinite;
+        -moz-animation: AnimationName 30s ease infinite;
+        animation: AnimationName 30s ease infinite;
+      }
+
+      @-webkit-keyframes AnimationName {
+        0% {
+          background-position: 92% 0%;
+        }
+        50% {
+          background-position: 9% 100%;
+        }
+        100% {
+          background-position: 92% 0%;
+        }
+      }
+      @-moz-keyframes AnimationName {
+        0% {
+          background-position: 92% 0%;
+        }
+        50% {
+          background-position: 9% 100%;
+        }
+        100% {
+          background-position: 92% 0%;
+        }
+      }
+      @keyframes AnimationName {
+        0% {
+          background-position: 92% 0%;
+        }
+        50% {
+          background-position: 9% 100%;
+        }
+        100% {
+          background-position: 92% 0%;
+        }
+      }
+      .form-outline .form-control {
+        border-color: #00000030 !important;
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main-bg">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-xl-10">
+            <div class="card p-4 pt-0" style="border-radius: 1rem">
+              <form action="/submit" method="POST" id="register">
+                <div class="d-flex flex-column p-2 pt-5 align-items-center">
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <a href="/">
+                      <img
+                        src="./src/img/SSLandscapeLogo.png"
+                        alt=""
+                        srcset=""
+                        style="width: 200px"
+                      />
+                    </a>
+                  </div>
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i
+                      class="fas fa-cubes fa-2x me-3"
+                      style="color: #ff6219"
+                    ></i>
+                    <span class="h3 capitalize fw-bold mb-0"
+                      >Welcome to our family!</span
+                    >
+                  </div>
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px">
+                    Sign into your account
+                  </h5>
+                </div>
+
+                <div class="row g-0">
+                  <div class="col-md-6 d-flex align-items-center">
+                    <div class="card-body p-4 p-lg-5 text-black">
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input
+                          type="name"
+                          name="name"
+                          id="form2Example21"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="form2Example21"
+                          >Full Name</label
+                        >
+                      </div>
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input
+                          type="phone"
+                          name="phone"
+                          id="form2Example18"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="form2Example18"
+                          >Phone No</label
+                        >
+                      </div>
+
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input
+                          type="password"
+                          name="password"
+                          id="password"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="password"
+                          >Password</label
+                        >
+                      </div>
+
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <select
+                          data-mdb-select-init
+                          name="levelofStudy"
+                          class="form-control form-control-lg border"
+                        >
+                          <option value="">Select Level of Study</option>
+                          <option value="9th">Class 9th</option>
+                          <option value="1th">Class 10th</option>
+                          <option value="11th">Class 11th</option>
+                          <option value="12th">Class 12th</option>
+                          <option value="Honours 1st year">
+                            Honours 1st year
+                          </option>
+                          <option value="Honours 2nd year">
+                            Honours 2nd year
+                          </option>
+                          <option value="Honours 3rd year">
+                            Honours 3rd year
+                          </option>
+                          <option value="Honours 4th year">
+                            Honours 4th year
+                          </option>
+                        </select>
+                        <!-- <label class="form-label" for=""
+                          >Level of Study</label
+                        > -->
+                      </div>
+
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input
+                          type="text"
+                          name="institutionName"
+                          id="institution_name"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="institution_name"
+                          >Institution Name</label
+                        >
+                      </div>
+
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" for="confusion_check"
+                          >Did you face confusion in subject choosing?</label
+                        >
+                        <div class="d-flex" id="confusion_check">
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="confusion"
+                              id="confusion_yes"
+                              value="no"
+                            />
+                            <label class="form-check-label" for="confusion_yes"
+                              >Yes</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="confusion"
+                              id="confusion_no"
+                              value="no"
+                            />
+                            <label class="form-check-label" for="confusion_no"
+                              >No</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" for="regret_check"
+                          >Do you regret the subject you are studying?</label
+                        >
+                        <div class="d-flex" id="regret_check">
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="regret"
+                              id="regret_yes"
+                              value="yes"
+                            />
+                            <label class="form-check-label" for="regret_yes"
+                              >Yes</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="regret"
+                              id="regret_no"
+                              value="no"
+                            />
+                            <label class="form-check-label" for="regret_no"
+                              >No</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <textarea
+                          name="reason_regret"
+                          id="reason"
+                          class="form-control form-control-lg"
+                        ></textarea>
+                        <label class="form-label" for="reason">Reason</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 d-flex align-items-center">
+                    <div
+                      class="card-body p-4 p-lg-5 text-black"
+                      style="padding-top: 0 !important"
+                    >
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input
+                          type="address"
+                          name="address"
+                          id="form2Example19"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="form2Example19"
+                          >Address</label
+                        >
+                      </div>
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input
+                          type="email"
+                          name="email"
+                          id="form2Example20"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="form2Example20"
+                          >Email address</label
+                        >
+                      </div>
+
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input
+                          type="password"
+                          name="confirm_password"
+                          id="confirm_password"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="confirm_password"
+                          >Confirm Password</label
+                        >
+                      </div>
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input
+                          type="text"
+                          name="subject"
+                          id="sub_or_dep"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="sub_or_dep"
+                          >Subject or Department</label
+                        >
+                      </div>
+                      <div
+                        data-mdb-input-init
+                        class="form-outline mb-4 d-flex flex-column"
+                      >
+                        <label class="form-label" for="satisfied_check"
+                          >Are you satisfied with the subject you are
+                          studying?</label
+                        >
+                        <div class="d-flex pb-2" id="satisfied_check">
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="satisfied"
+                              id="satisfied_yes"
+                              value="yes"
+                            />
+                            <label class="form-check-label" for="satisfied_yes"
+                              >Yes</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="satisfied"
+                              id="satisfied_no"
+                              value="no"
+                            />
+                            <label class="form-check-label" for="satisfied_no"
+                              >No</label
+                            >
+                          </div>
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-4">
+                          <textarea
+                            rows="5"
+                            name="reason_satisfied"
+                            id="reason_text"
+                            class="form-control form-control-lg"
+                          ></textarea>
+                          <label class="form-label" for="reason_text"
+                            >Reason</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pt-1 mb-4">
+                  <button
+                    class="btn btn-success btn-lg btn-block"
+                    type="submit"
+                  >
+                    Sign Up
+                  </button>
+                </div>
+                <div class="d-flex align-items-center flex-column">
+                  <!-- <a class="small text-muted text-center" href="#!"
+                    >Forgot password?</a
+                  > -->
+                  <p class="mb-5 pb-lg-2" style="color: #393f81">
+                    You have an account?
+                    <a href="/login" style="color: #393f81">Sign In here</a>
+                  </p>
+                  <div class="d-flex">
+                    <a href="#!" class="small text-muted">Terms of use.</a>
+                    <a href="#!" class="small text-muted">Privacy policy</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const BASE_URL = "http://studentsquare.org/ss-admin/p1";
+      document
+        .getElementById("register")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault(); // Prevent the default form submission
+
+          const formData = new FormData(this);
+          const data = {};
+
+          formData.forEach((value, key) => {
+            data[key] = value;
+          });
+
+          try {
+            const response = await fetch(
+              BASE_URL + "/api/public/global/users",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+              }
+            );
+
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+
+            const result = await response.json();
+            // document.cookie = `token=${result.token}; path=/; max-age=3600`;
+            window.location.href = "/verify/" + result.newUser.email;
+          } catch (error) {
+            console.error("Error:", error);
+          }
+        });
+    </script>
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"
+    ></script>
+  </body>
+</html>

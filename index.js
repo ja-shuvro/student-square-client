@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const session = require("express-session");
 const allRouter = require("./router/router");
+const notFoundController = require("./controllers/notFound");
 
 // Set trust proxy
 app.set("trust proxy", true);
@@ -15,19 +16,20 @@ app.set("views", "views");
 
 // Middleware
 app.use(express.static("public"));
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
-app.use(
-  session({
-    secret: process.env.SECRET_KEY,
-    resave: false,
-    saveUninitialized: true,
-  })
-);
+// app.use(
+//   session({
+//     secret: process.env.SECRET_KEY,
+//     resave: false,
+//     saveUninitialized: true,
+//   })
+// );
 
 app.use("/", allRouter);
+app.use(notFoundController);
 
 // Start the server
 const PORT = process.env.PORT || 1919;
