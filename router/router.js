@@ -7,6 +7,8 @@ const {
   homepage,
   magazin,
   auth,
+  others,
+  user_profile,
 } = require("./index");
 
 router.use(homepage);
@@ -15,5 +17,7 @@ router.use(employee);
 router.use(notices_bord);
 router.use(magazin);
 router.use(auth);
+router.use(others);
+router.use(user_profile);
 
 module.exports = router;

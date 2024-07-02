@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Jhon Doe - Blogs</title>
+    <link
+      rel="shortcut icon"
+      href="/src/img/SSsiteIcon.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Chart.js  -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"
+      integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="/src/css/main.css" />
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <!-- Navbar-->
+    <%- include('./partials/navbar.ejs') %>
+
+    <!-- Navbar -->
+
+    <!-- Main Content Start -->
+    <div class="custom-container container my-5">
+      <div class="intro_section">
+        <h1>Jhon Doe</h1>
+        <h3>example@mail.com</h3>
+        <h3>017XXXXXXXX</h3>
+      </div>
+
+      <section class="mt-3">
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn btn-success my-3"
+          data-mdb-ripple-init
+          data-mdb-modal-init
+          data-mdb-target="#addBlog"
+        >
+          Add Blog
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="addBlog"
+          data-mdb-backdrop="static"
+          data-mdb-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="addBlogLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addBlogLabel">Add Blog</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-mdb-ripple-init
+                  data-mdb-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form action="#" method="post">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div>
+                        <div class="mb-4 d-flex justify-content-start">
+                          <img
+                            id="thumbnails"
+                            src="/src/img/upload-image.png"
+                            alt="example placeholder"
+                            style="
+                              width: 150px;
+                              height: 100px;
+                              object-fit: contain;
+                              background: #3f3f3f38;
+                            "
+                            class="rounded"
+                          />
+                          <input
+                            type="hidden"
+                            name="thumbnails"
+                            id="thumb_value"
+                          />
+                        </div>
+                        <div class="d-flex justify-content-start">
+                          <div
+                            data-mdb-ripple-init
+                            class="btn btn-success rounded"
+                            style="padding: 3px 20px; font-size: 11px"
+                          >
+                            <label
+                              class="form-label text-white m-1"
+                              for="customFile1"
+                              >Choose file</label
+                            >
+                            <input
+                              type="file"
+                              class="form-control d-none"
+                              id="customFile1"
+                              name="thumb"
+                              onchange="displaySelectedImage(event, 'thumbnails', 'thumbnails', 'thumb', 'thumb_value', 'newThumbnail')"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-outline mt-3" data-mdb-input-init>
+                        <input
+                          type="text"
+                          id="title"
+                          name="title"
+                          class="form-control"
+                        />
+                        <label class="form-label" for="title">Title</label>
+                      </div>
+
+                      <div class="mt-3">
+                        <select
+                          id="category_id"
+                          name="category_id"
+                          class="form-control border"
+                        >
+                          <option value="">Select Category</option>
+                          <option value="one">One</option>
+                          <option value="two">Two</option>
+                        </select>
+                      </div>
+
+                      <div class="form-outline mt-3" data-mdb-input-init>
+                        <input
+                          type="text"
+                          id="reading_time"
+                          name="reading_time"
+                          class="form-control border"
+                        />
+                        <label class="form-label" for="reading_time"
+                          >Reading Time</label
+                        >
+                      </div>
+                      <div class="form-outline mt-3" data-mdb-input-init>
+                        <input
+                          type="text"
+                          id="short_dis"
+                          name="short_dis"
+                          class="form-control border"
+                        />
+                        <label class="form-label" for="short_dis"
+                          >Short Discription(max: max 40 character
+                          letter)</label
+                        >
+                      </div>
+                      <div class="form-outline mt-3" data-mdb-input-init>
+                        <input
+                          type="text"
+                          id="quotation"
+                          name="quotation"
+                          class="form-control border"
+                        />
+                        <label class="form-label" for="quotation"
+                          >Quotation(max: max 40 character letter)</label
+                        >
+                      </div>
+                      <div class="form-outline mt-3" data-mdb-input-init>
+                        <input
+                          type="text"
+                          id="tags"
+                          name="tags"
+                          class="form-control border"
+                        />
+                        <label class="form-label" for="tags">Tags</label>
+                      </div>
+                      <div class="peraOne mt-4">
+                        <p>Pera One</p>
+                        <div>
+                          <div class="mb-4 d-flex justify-content-start">
+                            <img
+                              id="peraOneImg"
+                              src="/src/img/upload-image.png"
+                              alt="example placeholder"
+                              style="
+                                width: 150px;
+                                height: 100px;
+                                object-fit: contain;
+                                background: #3f3f3f38;
+                              "
+                              class="rounded"
+                            />
+                            <input
+                              type="hidden"
+                              name="midea_one"
+                              id="midea_value_one"
+                            />
+                          </div>
+                          <div class="d-flex justify-content-start">
+                            <div
+                              data-mdb-ripple-init
+                              class="btn btn-success rounded"
+                              style="padding: 3px 20px; font-size: 11px"
+                            >
+                              <label
+                                class="form-label text-white m-1"
+                                for="pera_one_image"
+                                >Choose file</label
+                              >
+                              <input
+                                type="file"
+                                class="form-control d-none"
+                                id="pera_one_image"
+                                name="img"
+                                onchange="displaySelectedImage(event, 'peraOneImg', 'mideas', 'img','midea_value_one', 'newMidea')"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-outline mt-3" data-mdb-input-init>
+                          <textarea
+                            type="text"
+                            id="dis_one"
+                            name="dis_one"
+                            class="form-control border"
+                          ></textarea>
+                          <label class="form-label" for="dis_one"
+                            >Description</label
+                          >
+                        </div>
+                        <div class="form-outline mt-3" data-mdb-input-init>
+                          <input
+                            type="text"
+                            id="img_ref_one"
+                            name="img_ref_one"
+                            class="form-control border"
+                          />
+                          <label class="form-label" for="img_ref_one"
+                            >Image Reference</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="peraTwo mt-4">
+                        <p>Pera Two</p>
+                        <div>
+                          <div class="mb-4 d-flex justify-content-start">
+                            <img
+                              id="peraTwoImg"
+                              src="/src/img/upload-image.png"
+                              alt="example placeholder"
+                              style="
+                                width: 150px;
+                                height: 100px;
+                                object-fit: contain;
+                                background: #3f3f3f38;
+                              "
+                              class="rounded"
+                            />
+                            <input
+                              type="hidden"
+                              name="midea_two"
+                              id="midea_value_two"
+                            />
+                          </div>
+                          <div class="d-flex justify-content-start">
+                            <div
+                              data-mdb-ripple-init
+                              class="btn btn-success rounded"
+                              style="padding: 3px 20px; font-size: 11px"
+                            >
+                              <label
+                                class="form-label text-white m-1"
+                                for="pera_two_image"
+                                >Choose file</label
+                              >
+                              <input
+                                type="file"
+                                class="form-control d-none"
+                                id="pera_two_image"
+                                name="img"
+                                onchange="displaySelectedImage(event, 'peraTwoImg','mideas', 'img','midea_value_two', 'newMidea')"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-outline mt-3" data-mdb-input-init>
+                          <textarea
+                            type="text"
+                            id="dis_two"
+                            name="dis_two"
+                            class="form-control border"
+                          ></textarea>
+                          <label class="form-label" for="dis_two"
+                            >Description</label
+                          >
+                        </div>
+                        <div class="form-outline mt-3" data-mdb-input-init>
+                          <input
+                            type="text"
+                            id="img_ref_two"
+                            name="img_ref_two"
+                            class="form-control border"
+                          />
+                          <label class="form-label" for="img_ref_two"
+                            >Image Reference</label
+                          >
+                        </div>
+                      </div>
+                      <div class="peraTwo mt-4">
+                        <p>Pera Three</p>
+                        <div>
+                          <div class="mb-4 d-flex justify-content-start">
+                            <img
+                              id="peraThreeImg"
+                              src="/src/img/upload-image.png"
+                              alt="example placeholder"
+                              style="
+                                width: 150px;
+                                height: 100px;
+                                object-fit: contain;
+                                background: #3f3f3f38;
+                              "
+                              class="rounded"
+                            />
+                            <input
+                              type="hidden"
+                              name="midea_three"
+                              id="midea_value_three"
+                            />
+                          </div>
+                          <div class="d-flex justify-content-start">
+                            <div
+                              data-mdb-ripple-init
+                              class="btn btn-success rounded"
+                              style="padding: 3px 20px; font-size: 11px"
+                            >
+                              <label
+                                class="form-label text-white m-1"
+                                for="pera_three_image"
+                                >Choose file</label
+                              >
+                              <input
+                                type="file"
+                                class="form-control d-none"
+                                id="pera_three_image"
+                                name="img"
+                                onchange="displaySelectedImage(event, 'peraThreeImg','mideas', 'img','midea_value_three', 'newMidea')"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-outline mt-3" data-mdb-input-init>
+                          <textarea
+                            type="text"
+                            id="dis_three"
+                            name="dis_three"
+                            class="form-control border"
+                          ></textarea>
+                          <label class="form-label" for="dis_three"
+                            >Description</label
+                          >
+                        </div>
+                        <div class="form-outline mt-3" data-mdb-input-init>
+                          <input
+                            type="text"
+                            id="img_ref_three"
+                            name="img_ref_three"
+                            class="form-control border"
+                          />
+                          <label class="form-label" for="img_ref_three"
+                            >Image Reference</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-5 d-flex justify-content-end">
+                    <button
+                      type="button"
+                      class="btn btn-danger me-2"
+                      data-mdb-ripple-init
+                      data-mdb-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-success">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+        <div class="content_section">
+          <!-- Tabs navs -->
+          <ul
+            class="nav nav-tabs mb-3 user-blog-page"
+            id="ex-with-icons"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <a
+                data-mdb-tab-init
+                class="nav-link active"
+                id="publish-blogs-tab-1"
+                href="#publish-blogs-tabs-1"
+                role="tab"
+                aria-controls="publish-blogs-tabs-1"
+                aria-selected="true"
+                ><i class="fas fa-blog fa-fw me-2"></i>Publish Blogs</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                data-mdb-tab-init
+                class="nav-link"
+                id="pending-blogs-tab-2"
+                href="#pending-blogs-tabs-2"
+                role="tab"
+                aria-controls="pending-blogs-tabs-2"
+                aria-selected="false"
+                ><i class="fas fa-blog fa-fw me-2"></i>Pending Blogs</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                data-mdb-tab-init
+                class="nav-link"
+                id="rejected-blogs-tab-3"
+                href="#rejected-blogs-tabs-3"
+                role="tab"
+                aria-controls="rejected-blogs-tabs-3"
+                aria-selected="false"
+                ><i class="fas fa-blog fa-fw me-2"></i>Rejected Blogs</a
+              >
+            </li>
+          </ul>
+          <!-- Tabs navs -->
+
+          <!-- Tabs content -->
+          <div class="tab-content" id="ex-with-icons-content">
+            <div
+              class="tab-pane fade show active"
+              id="publish-blogs-tabs-1"
+              role="tabpanel"
+              aria-labelledby="publish-blogs-tab-1"
+            >
+              <div>
+                <table class="table align-middle mb-0 bg-white">
+                  <thead class="bg-light">
+                    <tr>
+                      <th><strong>Title</strong></th>
+                      <th><strong>Category</strong></th>
+                      <th><strong> Reading Time</strong></th>
+                      <th><strong> Tags</strong></th>
+                      <th><strong>Action</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p class="fw-normal mb-1">
+                          Lorem, ipsum dolor sit amet consectetur.
+                        </p>
+                      </td>
+                      <td>Category</td>
+                      <td>4 Minute</td>
+                      <td>
+                        <span class="badge badge-success rounded-pill d-inline"
+                          >One</span
+                        >
+                        <span class="badge badge-info rounded-pill d-inline"
+                          >Two</span
+                        >
+                        <span class="badge badge-danger rounded-pill d-inline"
+                          >Three</span
+                        >
+                        <span
+                          class="badge badge-secondary rounded-pill d-inline"
+                          >Four</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-tertiary"
+                          data-mdb-ripple-init
+                          data-mdb-modal-init
+                          data-mdb-target="#addBlog"
+                        >
+                          <i class="far fa-pen-to-square text-success fs-6"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pending-blogs-tabs-2"
+              role="tabpanel"
+              aria-labelledby="pending-blogs-tab-2"
+            >
+              <div>
+                <table class="table align-middle mb-0 bg-white">
+                  <thead class="bg-light">
+                    <tr>
+                      <th><strong>Title</strong></th>
+                      <th><strong>Category</strong></th>
+                      <th><strong> Reading Time</strong></th>
+                      <th><strong> Tags</strong></th>
+                      <th><strong>Action</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p class="fw-normal mb-1">
+                          Lorem, ipsum dolor sit amet consectetur.
+                        </p>
+                      </td>
+                      <td>Category</td>
+                      <td>4 Minute</td>
+                      <td>
+                        <span class="badge badge-success rounded-pill d-inline"
+                          >One</span
+                        >
+                        <span class="badge badge-info rounded-pill d-inline"
+                          >Two</span
+                        >
+                        <span class="badge badge-danger rounded-pill d-inline"
+                          >Three</span
+                        >
+                        <span
+                          class="badge badge-secondary rounded-pill d-inline"
+                          >Four</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-tertiary"
+                          data-mdb-ripple-init
+                          data-mdb-modal-init
+                          data-mdb-target="#addBlog"
+                        >
+                          <i class="far fa-pen-to-square text-success fs-6"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="rejected-blogs-tabs-3"
+              role="tabpanel"
+              aria-labelledby="rejected-blogs-tab-3"
+            >
+              <div>
+                <table class="table align-middle mb-0 bg-white">
+                  <thead class="bg-light">
+                    <tr>
+                      <th><strong>Title</strong></th>
+                      <th><strong>Category</strong></th>
+                      <th><strong> Reading Time</strong></th>
+                      <th><strong> Tags</strong></th>
+                      <th><strong>Action</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p class="fw-normal mb-1">
+                          Lorem, ipsum dolor sit amet consectetur.
+                        </p>
+                      </td>
+                      <td>Category</td>
+                      <td>4 Minute</td>
+                      <td>
+                        <span class="badge badge-success rounded-pill d-inline"
+                          >One</span
+                        >
+                        <span class="badge badge-info rounded-pill d-inline"
+                          >Two</span
+                        >
+                        <span class="badge badge-danger rounded-pill d-inline"
+                          >Three</span
+                        >
+                        <span
+                          class="badge badge-secondary rounded-pill d-inline"
+                          >Four</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-tertiary"
+                          data-mdb-ripple-init
+                          data-mdb-modal-init
+                          data-mdb-target="#addBlog"
+                        >
+                          <i class="far fa-pen-to-square text-success fs-6"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- Tabs content -->
+        </div>
+      </section>
+    </div>
+    <!-- Footer  -->
+    <%- include('./partials/footer.ejs') %>
+    <!-- Main Content End  -->
+
+    <!-- End your project here-->
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+    ></script>
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"
+    ></script>
+
+    <!-- Your custom scripts (optional) -->
+    <script type="module" src="./src/js/main.js"></script>
+    <!-- <script src="./src/chart/communication-skill.js"></script> -->
+
+    <script src="./src/js/imageUpload.js"></script>
+  </body>
+</html>

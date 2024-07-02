@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Jhon Doe - Unveiling Success</title>
+    <link
+      rel="shortcut icon"
+      href="/src/img/SSsiteIcon.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Chart.js  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"
+      integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="/src/css/prev-blog-slider.css" />
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <!-- Navbar-->
+    <%- include('./partials/navbar.ejs') %>
+
+    <!-- Navbar -->
+
+    <!-- Main Content Start -->
+    <div class="custom-container container my-5">
+      <div class="intro_section">
+        <h1>Jhon Doe</h1>
+        <h3>example@mail.com</h3>
+        <h3>017XXXXXXXX</h3>
+      </div>
+
+      <section class="mt-3">
+        <div class="content_section">
+          <!-- Tabs navs -->
+          <ul
+            class="nav nav-tabs border-bottom border-secondary pb-3 c-main-tab-btn"
+            id="ex-with-icons"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <a
+                data-mdb-tab-init
+                class="nav-link fs-7 active"
+                id="ex-with-icons-tab-1"
+                href="#assessment-report"
+                role="tab"
+                aria-controls="assessment-report"
+                aria-selected="true"
+              >
+                <i class="fas fa-clipboard-list me-2"></i>
+                ASSESSMENT REPORT
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                data-mdb-tab-init
+                class="nav-link fs-7"
+                id="ex-with-icons-tab-2"
+                href="#desision-making-on-subject"
+                role="tab"
+                aria-controls="desision-making-on-subject"
+                aria-selected="false"
+              >
+                <i class="fas fa-arrow-trend-up me-2"></i>
+                DESISION MAKING ON SUBJECT
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                data-mdb-tab-init
+                class="nav-link fs-7"
+                id="ex-with-icons-tab-3"
+                href="#personalized-mentorship"
+                role="tab"
+                aria-controls="personalized-mentorship"
+                aria-selected="false"
+              >
+                <i class="fas fa-user-shield me-2"></i>
+                PERSONALIZED MENTORSHIP
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                data-mdb-tab-init
+                class="nav-link fs-7"
+                id="ex-with-icons-tab-3"
+                href="#swot-analysis"
+                role="tab"
+                aria-controls="swot-analysis"
+                aria-selected="false"
+              >
+                <i class="fas fa-chart-area me-2"></i>
+                SWOT ANALYSIS
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                data-mdb-tab-init
+                class="nav-link fs-7"
+                id="ex-with-icons-tab-3"
+                href="#career-roadmap"
+                role="tab"
+                aria-controls="career-roadmap"
+                aria-selected="false"
+              >
+                <i class="fas fa-award me-2"></i>
+                CAREER ROADMAP
+              </a>
+            </li>
+          </ul>
+          <!-- Tabs navs -->
+
+          <!-- Tabs content -->
+          <div class="tab-content" id="ex-with-icons-content">
+            <div
+              class="tab-pane fade show active"
+              id="assessment-report"
+              role="tabpanel"
+              aria-labelledby="ex-with-icons-tab-1"
+            >
+              <div class="row w-100 c-assessment-report">
+                <div class="col-3 c-a-r-child car-child-one">
+                  <!-- Tab navs -->
+                  <div
+                    class="nav nav-tabs text-center"
+                    id="v-tabs-tab"
+                    role="tablist"
+                    aria-orientation="vertical"
+                  >
+                    <a
+                      data-mdb-tab-init
+                      class="nav-link active"
+                      id="communication-skill-tab"
+                      href="#communication-skill"
+                      role="tab"
+                      aria-controls="communication-skill"
+                      aria-selected="true"
+                      ><i class="fas fa-tower-broadcast me-2"></i> Communication
+                      Skill
+                    </a>
+                    <a
+                      data-mdb-tab-init
+                      class="nav-link"
+                      id="analytical-skill-tab"
+                      href="#analytical-skill"
+                      role="tab"
+                      aria-controls="analytical-skill"
+                      aria-selected="false"
+                      ><i class="fas fa-chart-pie fa-fw me-2"></i> Analytical
+                      Skill
+                    </a>
+                    <a
+                      data-mdb-tab-init
+                      class="nav-link"
+                      id="convincing-ability-tab"
+                      href="#convincing-ability"
+                      role="tab"
+                      aria-controls="convincing-ability"
+                      aria-selected="false"
+                      ><i class="fas fa-handshake-angle me-2"></i> Convincing
+                      Ability
+                    </a>
+                    <a
+                      data-mdb-tab-init
+                      class="nav-link"
+                      id="memorizing-skil-tab"
+                      href="#memorizing-skil"
+                      role="tab"
+                      aria-controls="memorizing-skil"
+                      aria-selected="false"
+                      ><i class="fas fa-brain me-2"></i> Memorizing Skil
+                    </a>
+                  </div>
+                  <!-- Tab navs -->
+                </div>
+
+                <div class="col-9 c-a-r-child car-child-two">
+                  <!-- Tab content -->
+                  <div class="tab-content" id="v-tabs-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="communication-skill"
+                      role="tabpanel"
+                      aria-labelledby="communication-skill-tab"
+                    >
+                      <div class="custom-tab-section rounded">
+                        Communication Skill
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="analytical-skill"
+                      role="tabpanel"
+                      aria-labelledby="analytical-skill-tab"
+                    >
+                      <div class="custom-tab-section rounded">
+                        Analytical Skill
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="convincing-ability"
+                      role="tabpanel"
+                      aria-labelledby="convincing-ability-tab"
+                    >
+                      <div class="custom-tab-section rounded">
+                        Convincing Ability
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="memorizing-skil"
+                      role="tabpanel"
+                      aria-labelledby="memorizing-skil-tab"
+                    >
+                      <div class="custom-tab-section rounded">
+                        Memorizing Skil
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Tab content -->
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="desision-making-on-subject"
+              role="tabpanel"
+              aria-labelledby="ex-with-icons-tab-2"
+            >
+              Tab 2 content
+            </div>
+            <div
+              class="tab-pane fade"
+              id="personalized-mentorship"
+              role="tabpanel"
+              aria-labelledby="ex-with-icons-tab-3"
+            >
+              Tab 3 content
+            </div>
+            <div
+              class="tab-pane fade"
+              id="swot-analysis"
+              role="tabpanel"
+              aria-labelledby="ex-with-icons-tab-3"
+            >
+              <div class="row w-100 c-assessment-report">
+                <div class="col-3 car-child-one">
+                  <!-- Tab navs -->
+                  <div
+                    class="nav nav-tabs text-center"
+                    id="v-tabs-tab"
+                    role="tablist"
+                    aria-orientation="vertical"
+                  >
+                    <a
+                      data-mdb-tab-init
+                      class="nav-link active"
+                      id="strength-tab"
+                      href="#strength"
+                      role="tab"
+                      aria-controls="strength"
+                      aria-selected="true"
+                      ><i class="fas fa-hand-fist me-2"></i> Strength
+                    </a>
+                    <a
+                      data-mdb-tab-init
+                      class="nav-link"
+                      id="weakness-tab"
+                      href="#weakness"
+                      role="tab"
+                      aria-controls="weakness"
+                      aria-selected="false"
+                      ><i class="fas fa-arrow-trend-down me-2"></i> Weakness
+                    </a>
+                    <a
+                      data-mdb-tab-init
+                      class="nav-link"
+                      id="opportunity-tab"
+                      href="#opportunity"
+                      role="tab"
+                      aria-controls="opportunity"
+                      aria-selected="false"
+                      ><i class="fas fa-arrow-trend-up me-2"></i> Opportunity
+                    </a>
+                    <a
+                      data-mdb-tab-init
+                      class="nav-link"
+                      id="threat-tab"
+                      href="#threat"
+                      role="tab"
+                      aria-controls="threat"
+                      aria-selected="false"
+                      ><i class="fas fa-skull-crossbones me-2"></i> Threat
+                    </a>
+                  </div>
+                  <!-- Tab navs -->
+                </div>
+
+                <div class="col-9 car-child-two">
+                  <!-- Tab content -->
+                  <div class="tab-content" id="v-tabs-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="strength"
+                      role="tabpanel"
+                      aria-labelledby="strength-tab"
+                    >
+                      <div class="custom-tab-section rounded">Strength</div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="weakness"
+                      role="tabpanel"
+                      aria-labelledby="weakness-tab"
+                    >
+                      <div class="custom-tab-section rounded">Weakness</div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="opportunity"
+                      role="tabpanel"
+                      aria-labelledby="opportunity-tab"
+                    >
+                      <div class="custom-tab-section rounded">Opportunity</div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="threat"
+                      role="tabpanel"
+                      aria-labelledby="threat-tab"
+                    >
+                      <div class="custom-tab-section rounded">Threat</div>
+                    </div>
+                  </div>
+                  <!-- Tab content -->
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="career-roadmap"
+              role="tabpanel"
+              aria-labelledby="ex-with-icons-tab-3"
+            >
+              <div class="row w-100 c-assessment-report">
+                <div class="col-3 car-child-one">
+                  <!-- Tab navs -->
+                  <div
+                    class="nav nav-tabs text-center"
+                    id="v-tabs-tab"
+                    role="tablist"
+                    aria-orientation="vertical"
+                  >
+                    <a
+                      data-mdb-tab-init
+                      class="nav-link active"
+                      id="progress-plan-tab"
+                      href="#progress-plan"
+                      role="tab"
+                      aria-controls="progress-plan"
+                      aria-selected="true"
+                      ><i class="fas fa-list-check me-2"></i> Progress Plan
+                    </a>
+                    <a
+                      data-mdb-tab-init
+                      class="nav-link"
+                      id="weekly-target-tab"
+                      href="#weekly-target"
+                      role="tab"
+                      aria-controls="weekly-target"
+                      aria-selected="false"
+                      ><i class="fas fa-bullseye me-2"></i> Weekly Target
+                    </a>
+                    <a
+                      data-mdb-tab-init
+                      class="nav-link"
+                      id="monthly-target-tab"
+                      href="#monthly-target"
+                      role="tab"
+                      aria-controls="monthly-target"
+                      aria-selected="false"
+                      ><i class="fas fa-bullseye me-2"></i> Monthly Target
+                    </a>
+                  </div>
+                  <!-- Tab navs -->
+                </div>
+
+                <div class="col-9 car-child-two">
+                  <!-- Tab content -->
+                  <div class="tab-content" id="v-tabs-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="progress-plan"
+                      role="tabpanel"
+                      aria-labelledby="progress-plan-tab"
+                    >
+                      <div class="custom-tab-section rounded">
+                        Progress Plan
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="weekly-target"
+                      role="tabpanel"
+                      aria-labelledby="weekly-target-tab"
+                    >
+                      <div class="custom-tab-section rounded">
+                        Weekly Target
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="monthly-target"
+                      role="tabpanel"
+                      aria-labelledby="monthly-target-tab"
+                    >
+                      <div class="custom-tab-section rounded">
+                        Monthly Target
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Tab content -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tabs content -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer  -->
+    <%- include('./partials/footer.ejs') %>
+    <!-- Main Content End  -->
+
+    <!-- End your project here-->
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+    ></script>
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"
+    ></script>
+
+    <!-- Your custom scripts (optional) -->
+    <script type="module" src="./src/js/main.js"></script>
+    <script src="./src/chart/communication-skill.js"></script>
+  </body>
+</html>

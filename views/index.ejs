@@ -410,13 +410,14 @@
                 <div class="each-card">
                   <img
                     src="https://studentsquare.org/ss-admin/<%= feedback.images[index].img.replace('public','') %>"
-                    alt=""
+                    alt="<%= post.title %>"
                     srcset=""
+                    style="height: 150px; object-fit: cover"
                   />
                   <h5><%= post.title %></h5>
                   <p class="dis" style="font-size: 14px">
-                    <% var shortDis = post.dis; if (shortDis.length > 200) {
-                    shortDis = shortDis.substring(0, 200) + '...'; } %> <%=
+                    <% var shortDis = post.dis; if (shortDis.length > 150) {
+                    shortDis = shortDis.substring(0, 150) + '...'; } %> <%=
                     shortDis %>
                   </p>
                 </div>
@@ -806,26 +807,15 @@
                   </a>
                 </p>
                 <p class="card-text">
-                  <% 
-                    var discription = post.dis;
-                    var maxLength = 200;
-                    
-                    if (discription.length > maxLength) {
-                      var truncatedText = discription.substring(0, maxLength);
-
-                      while (truncatedText.length > 0 && truncatedText.charCodeAt(truncatedText.length - 1) > 255) {
-                        maxLength--;
-                        truncatedText = discription.substring(0, maxLength);
-                      }
-
-                      // Update discription with truncated text and ellipsis
-                      discription = truncatedText + '...';
-                    }
-                  %>
-                  <%= discription %>
+                  <% var discription = post.dis; var maxLength = 200; if
+                  (discription.length > maxLength) { var truncatedText =
+                  discription.substring(0, maxLength); while
+                  (truncatedText.length > 0 &&
+                  truncatedText.charCodeAt(truncatedText.length - 1) > 255) {
+                  maxLength--; truncatedText = discription.substring(0,
+                  maxLength); } discription = truncatedText + '...'; } %> <%=
+                  discription %>
                 </p>
-
-
               </div>
             </div>
             <% }) %>
@@ -865,38 +855,40 @@
         <h3>Our Partners</h3>
         <div class="partner-box">
           <div class="row">
-          <% partners.allPost.forEach((post, index) => { %>
-            <div class="col-md-3">
-              <div class="p-main-box"
-                style='
+            <% partners.allPost.forEach((post, index) => { %>
+            <div class="col-md-3 mb-2">
+              <div
+                class="p-main-box"
+                style="
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  flex-direction: column;'
+                  flex-direction: column;
+                "
               >
-               <img
-                    src="https://studentsquare.org/ss-admin<%= partners.logo[index].img.replace('public','') %>"
-                    alt="<%=post.title%>"
-                    srcset=""
-                    style='
-                        padding: 0;
-                        margin: 0;
-                        width: 100px;
-                        height: auto;
-                        object-fit: contain;
-                        border-radius: 0;
-                    '
-                  />
-              <p
-                style='
-                  margin: 0;
-                  margin-top: 2px;
-                  color: #000;
-                  font-weight: 600;
-                '
-              >
-                <%=post.title%>
-              </p>
+                <img
+                  src="https://studentsquare.org/ss-admin<%= partners.logo[index].img.replace('public','') %>"
+                  alt="<%=post.title%>"
+                  srcset=""
+                  style="
+                    padding: 0;
+                    margin: 0;
+                    width: 100px;
+                    height: auto;
+                    object-fit: contain;
+                    border-radius: 0;
+                  "
+                />
+                <p
+                  style="
+                    margin: 0;
+                    margin-top: 2px;
+                    color: #000;
+                    font-weight: 600;
+                  "
+                >
+                  <%=post.title%>
+                </p>
               </div>
             </div>
             <% }); %>

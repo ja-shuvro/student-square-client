@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQs - Student Square</title>
+    <link
+      rel="shortcut icon"
+      href="/src/img/SSsiteIcon.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="/src/css/main.css" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+      }
+      .faq-item {
+        margin-bottom: 30px;
+      }
+      .faq-item h3 {
+        font-weight: bold;
+        color: #004d40; /* Dark teal color */
+      }
+      .faq-item p {
+        margin-top: 10px;
+      }
+      .section-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #004d40; /* Dark teal color */
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      .report-item {
+        margin-bottom: 30px;
+      }
+      .report-item h3 {
+        color: #004d40; /* Dark teal color */
+      }
+      .report-item p {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('./partials/navbar.ejs') %>
+
+    <div class="container my-5">
+      <h1 class="mt-4 mb-4">FAQ - Student Square</h1>
+
+      <div class="faq-item">
+        <h3 class="mb-3">1. What is Student Square?</h3>
+        <p>
+          Student Square is an educational platform dedicated to student
+          counselling and social development. We provide a range of services and
+          resources to support students in their academic journey and personal
+          growth.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="mb-3">2. What services does Student Square offer?</h3>
+        <p>
+          Student Square offers a variety of services including student
+          counseling, career guidance, school visiting, academic support,
+          mentorship programs, and workshops on various topics such as study
+          skills, time management, and stress management.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="mb-3">
+          3. How can I be benefited from student counselling?
+        </h3>
+        <p>
+          Student counseling can provide you with a safe and confidential space
+          to discuss any challenges you may be facing, whether academic,
+          personal, or emotional. Our professional counselors are trained to
+          help you navigate these difficulties and develop strategies for
+          success.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="mb-3">4. Who are the counselors at Student Square?</h3>
+        <p>
+          Our counselors are qualified professionals with expertise in student
+          counseling and psychology. They are dedicated to supporting students
+          and helping them overcome obstacles, set goals, and thrive
+          academically and personally.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="mb-3">5. How do I schedule a counselling session?</h3>
+        <p>
+          For scheduling a counselling session, simply visit our website and
+          navigate to the counselling section. There, you'll find instructions
+          on how to book an appointment. We offer both in-person and virtual
+          counseling options for your convenience.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="mb-3">
+          6. Can Student Square help me with career guidance?
+        </h3>
+        <p>
+          Absolutely! We understand that choosing a career path can be
+          overwhelming. Our career guidance services are designed to assist you
+          in exploring different career options, identifying your strengths and
+          interests, and making informed decisions about your future.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="mb-3">
+          7. Are there resources available for academic support?
+        </h3>
+        <p>
+          Yes, we do provide a range of resources for academic support,
+          including study materials, competitive exam preparation guidelines,
+          time management techniques, and effective learning strategies. These
+          resources are designed to help you improve your academic performance
+          and reach your full potential.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="mb-3">8. Are there any mentorship programs available?</h3>
+        <p>
+          Yes, we do offer mentorship programs where experienced professionals
+          from various fields provide guidance and support to students. These
+          programs aim to foster personal and professional development, helping
+          you gain valuable insights and build networks within your desired
+          field.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="mb-3">9. Are the workshops and seminars free?</h3>
+        <p>
+          Some of our workshops and seminars may be free of charge, while others
+          may have a nominal fee. The pricing details for each event will be
+          mentioned on our website or during the registration process. We strive
+          to offer affordable and accessible resources to students.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="mb-3">
+          10. Are there any fees associated with using Student Square?
+        </h3>
+        <p>
+          Student Square offers both free and paid services. Basic features and
+          resources are available for free to all users. However, certain
+          specialized counseling services or advanced features may require a
+          fee. The pricing details for such services are provided on the
+          website.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="mb-3">
+          11. How can I stay updated with Student Square's offerings and events?
+        </h3>
+        <p>
+          To stay updated, you can subscribe to our newsletter, follow our
+          social media accounts, or regularly visit our website. We frequently
+          update our platforms with the latest information on workshops,
+          counseling services, and other student-centered initiatives.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="mb-3">
+          12. How can I contact the Student Square support team?
+        </h3>
+        <p>
+          For any queries or assistance, you can reach out to the Student Square
+          support team by visiting the "Contact Us" page on the website. They
+          will respond to your inquiry promptly and provide the necessary
+          support.
+        </p>
+      </div>
+
+      <h1 class="mt-4 mb-4">Draft:</h1>
+
+      <div class="faq-item">
+        <h3>What Is the Role of Ss?</h3>
+        <p>The role of Student Square is to...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What Is Ss Goal?</h3>
+        <p>The goal of Student Square is...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Why Does Ss Work on Large Scale?</h3>
+        <p>Student Square works on a large scale to...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What Are ‘Urban Programs’ and ‘Rural Programs’?</h3>
+        <p>
+          <strong>Urban programs:</strong> Urban programs in Student Square...
+        </p>
+        <p>
+          <strong>Rural programs:</strong> Rural programs in Student Square...
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How Can One Support SS?</h3>
+        <p>You can support Student Square by...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How Can You Enroll A Student At The Platform?</h3>
+        <p>To enroll a student at Student Square...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is The Organisation Accredited?</h3>
+        <p>Student Square is accredited by...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can Anyone Volunteer With Your Organization?</h3>
+        <p>Yes, anyone can volunteer with Student Square...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How Do You Select Students?</h3>
+        <p>Students are selected based on...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How Can I Make A Donation To Ss?</h3>
+        <p>To make a donation to Student Square...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          What Are Some Important Considerations For Ensuring SS Is Accessible
+          To Individuals With Disabilities?
+        </h3>
+        <p>Student Square ensures accessibility by...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          How Can SS Address Privacy Concerns And Assure Clients That Their
+          Personal Information Will Be Protected?
+        </h3>
+        <p>Student Square addresses privacy concerns by...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          What Types Of Resources Or Educational Materials Can Be Included On SS
+          To Provide Valuable Information To Visitors?
+        </h3>
+        <p>Student Square includes resources such as...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          What Is The Role Of Student Square In A Student’s Academic Life?
+        </h3>
+        <p>Student Square plays a crucial role in...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          What Is The Role Of A Counselor In Supporting Individuals Through
+          Difficult Times?
+        </h3>
+        <p>A counselor at Student Square supports individuals by...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What Are The Techniques Or Approaches Used In Counseling In SS?</h3>
+        <p>Counseling techniques in Student Square include...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          How Does Counseling Differ From Other Forms Of Mental Health Support,
+          Such As Therapy Or Coaching?
+        </h3>
+        <p>Counseling in Student Square differs from...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          What Are Some Important Qualities Or Characteristics Of An Effective
+          Counselor?
+        </h3>
+        <p>An effective counselor at Student Square possesses...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          How Can Counseling Help Individuals In Improving Their Self-Esteem And
+          Self-Confidence?
+        </h3>
+        <p>Counseling helps individuals by...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          What Are Some Strategies Counselors Use To Help Clients Manage Stress
+          And Anxiety?
+        </h3>
+        <p>Strategies used by counselors in Student Square include...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          What Is The Importance Of Establishing Trust And Rapport Between A
+          Counselor And Their Client?
+        </h3>
+        <p>Establishing trust and rapport is crucial because...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          How Can Counseling Assist Individuals In Developing Healthy Coping
+          Mechanisms For Dealing With Challenges In Life?
+        </h3>
+        <p>Counseling assists individuals by...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          What Ethical Considerations Are Important For Counselors To Keep In
+          Mind When Working With Clients?
+        </h3>
+        <p>
+          Ethical considerations for counselors at Student Square include...
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          How Does Counseling Contribute To Personal Growth And Self-Awareness?
+        </h3>
+        <p>Counseling contributes to personal growth by...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          How Can Counselors Help Individuals Navigate Major Life Transitions,
+          Such As Career Changes Or Relationship Shifts?
+        </h3>
+        <p>Counselors help individuals navigate transitions by...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>
+          How Can Counselors Assist Individuals In Setting And Achieving Their
+          Personal Goals?
+        </h3>
+        <p>Counselors assist individuals by...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is SS Right For Me And My Teen?</h3>
+        <p>Student Square is suitable for...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How Much Does It Cost Or Is It Free For All?</h3>
+        <p>Student Square offers both free and paid services...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is Ss Web Accessible For Disabled Users?</h3>
+        <p>
+          Student Square is designed to be accessible for disabled users by...
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How Does The Communication With The Counselor Work?</h3>
+        <p>Communication with a counselor at Student Square...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the importance of counselling?</h3>
+        <p>Counselling is important because...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How does counselling help students?</h3>
+        <p>Counselling helps students by...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How can I book a 1-to-1 counselling session?</h3>
+        <p>To book a 1-to-1 counselling session at Student Square...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How can I arrange a group counselling session in my school?</h3>
+        <p>
+          To arrange a group counselling session at your school through Student
+          Square...
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How can I engage with Student Square?</h3>
+        <p>You can engage with Student Square by...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How can I be a counsellor in Student Square?</h3>
+        <p>To become a counsellor at Student Square...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How can I express my views on the Student Square website?</h3>
+        <p>To express your views on the Student Square website...</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How can I write for blog articles and magazines?</h3>
+        <p>To contribute to...</p>
+      </div>
+
+      <h1 class="mt-4 mb-4">Report Fraud and Abuse</h1>
+
+      <div class="report-item">
+        <h3>Reporting Fraud</h3>
+        <p>
+          This page seeks to ensure the most effective use of all resources
+          supporting education goals, mental capacity, decision-making ability.
+          Also, it manages fund resources allocated for use in environments
+          prone to misuse through fraud, corruption, and other poor practices.
+        </p>
+        <p>
+          The owner of this page has zero tolerance for misuse of funds and uses
+          existing policies to address misuse cases and secure recovery of
+          resources. Misuse cases are carefully monitored with relevant grant
+          agents, partner countries, and donors to ensure reimbursement of
+          misused funds.
+        </p>
+      </div>
+
+      <div class="report-item">
+        <h3>Reporting Abuse</h3>
+        <p>
+          This page has zero tolerance for any kinds of exploitation, abuse, and
+          harassment through prevention, mitigation, and response.
+        </p>
+        <p>
+          All members are required to play an active role in reporting and
+          addressing abuse incidents. This process alerts the forum
+          administrator, who takes actions ranging from warnings to blocking
+          offenders from the site.
+        </p>
+      </div>
+
+      <div class="report-item">
+        <h3>Risk Management</h3>
+        <p>
+          The practice of risk management is integral to program management,
+          encompassing systems engineering, use of models, requirements
+          definition, operational testing, quality assurance, and logistics.
+        </p>
+        <p>
+          Risk management should be both top-down and bottom-up for
+          effectiveness. It is encouraged for program moderators to foster a
+          culture where personnel feel safe to identify risks, issues, and
+          opportunities without fear of reprisal.
+        </p>
+      </div>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
+    <!-- MDB core JavaScript -->
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+    ></script>
+  </body>
+</html>

@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { employee, parenting_advocacy } = require("../controllers");
+const { employee, who_we_are } = require("../controllers");
 
-router.get("/employee/:id", employee);
-router.get("/parenting-advocacy", parenting_advocacy);
+router.get("/who-we-are/:id", employee);
+router.get("/who-we-are", who_we_are);
 
 module.exports = router;

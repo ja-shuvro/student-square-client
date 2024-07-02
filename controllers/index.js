@@ -1,8 +1,19 @@
 const { homepage } = require("./homepage");
 const { blogs, blog } = require("./blogs");
-const { employee, parenting_advocacy } = require("./employee");
+const { employee, who_we_are } = require("./employee");
 const { notices_bord, notices_bord_details } = require("./notices-bord");
 const { magazins, magazin } = require("./mgazins");
+const {
+  privacyPolicy,
+  about,
+  ourMission,
+  whereWeWork,
+  press,
+  whatWeDo,
+  termsOfUse,
+  faqs,
+  contact,
+} = require("./others");
 const {
   registration,
   submit_data,
@@ -12,12 +23,14 @@ const {
   login,
 } = require("./auth");
 
+const { user_dashboard, user_blog, profile } = require("./user_profile");
+
 module.exports = {
   homepage,
   blogs,
   blog,
   employee,
-  parenting_advocacy,
+  who_we_are,
   notices_bord,
   notices_bord_details,
   magazins,
@@ -29,5 +42,22 @@ module.exports = {
     recover_password,
     recover_password_verify,
     login,
+  },
+  others: {
+    privacyPolicy,
+    about,
+    ourMission,
+    whereWeWork,
+    press,
+    whatWeDo,
+    termsOfUse,
+    faqs,
+    contact,
+  },
+
+  user_profile: {
+    user_dashboard,
+    user_blog,
+    profile,
   },
 };

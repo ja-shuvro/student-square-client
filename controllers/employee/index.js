@@ -3,7 +3,7 @@ const axios = require("axios");
 const BASE_URL = "https://studentsquare.org/ss-admin/p1";
 const getSpecificData = require("../../utils/getSpecificData");
 
-exports.parenting_advocacy = async (req, res) => {
+exports.who_we_are = async (req, res) => {
   try {
     let posts = await axios.get(BASE_URL + "/api/public/employee");
     let advisoriesPosts = await axios.get(BASE_URL + "/api/public/advisories");
@@ -117,7 +117,7 @@ exports.parenting_advocacy = async (req, res) => {
       pagination,
     };
 
-    res.render("./parenting-advocacy.ejs", data);
+    res.render("./who-we-are.ejs", data);
   } catch (error) {
     console.log(error);
   }

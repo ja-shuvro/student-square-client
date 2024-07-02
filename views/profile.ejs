@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Jhon Doe - Unveiling Success</title>
+    <link
+      rel="shortcut icon"
+      href="/src/img/SSsiteIcon.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Chart.js  -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"
+      integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="./src/css/prev-blog-slider.css" />
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <!-- Navbar-->
+    <%- include('./partials/navbar.ejs') %>
+
+    <!-- Navbar -->
+
+    <!-- Main Content Start -->
+    <div class="custom-container container my-5">
+      <div class="intro_section">
+        <h1>Jhon Doe</h1>
+        <h3>example@mail.com</h3>
+        <h3>017XXXXXXXX</h3>
+      </div>
+
+      <section class="mt-3">
+        <button
+          type="button"
+          class="btn btn-success my-3"
+          data-mdb-ripple-init
+          data-mdb-modal-init
+          data-mdb-target="#addBlog"
+        >
+          <i class="far fa-pen-to-square fs-6"></i> Edit Profile
+        </button>
+
+        <div class="w-100 h-3 badge-danger"></div>
+
+        <div
+          class="modal fade"
+          id="addBlog"
+          data-mdb-backdrop="static"
+          data-mdb-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="addBlogLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addBlogLabel">Edit Profile</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-mdb-ripple-init
+                  data-mdb-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form action="/submit" method="POST" id="register">
+                  <div class="row g-0">
+                    <div class="col-md-6 d-flex align-items-center">
+                      <div class="card-body p-4 p-lg-5 text-black">
+                        <div data-mdb-input-init class="form-outline mb-4">
+                          <input
+                            type="name"
+                            name="name"
+                            id="form2Example21"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="form2Example21"
+                            >Full Name</label
+                          >
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-4">
+                          <input
+                            type="phone"
+                            name="phone"
+                            id="form2Example18"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="form2Example18"
+                            >Phone No</label
+                          >
+                        </div>
+
+                        <div data-mdb-input-init class="form-outline mb-4">
+                          <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="password"
+                            >Password</label
+                          >
+                        </div>
+
+                        <div class="mb-4">
+                          <select
+                            name="levelofStudy"
+                            class="form-control form-control-lg border"
+                          >
+                            <option value="">Select Level of Study</option>
+                            <option value="9th">Class 9th</option>
+                            <option value="1th">Class 10th</option>
+                            <option value="11th">Class 11th</option>
+                            <option value="12th">Class 12th</option>
+                            <option value="Honours 1st year">
+                              Honours 1st year
+                            </option>
+                            <option value="Honours 2nd year">
+                              Honours 2nd year
+                            </option>
+                            <option value="Honours 3rd year">
+                              Honours 3rd year
+                            </option>
+                            <option value="Honours 4th year">
+                              Honours 4th year
+                            </option>
+                          </select>
+                        </div>
+
+                        <div
+                          data-mdb-input-init
+                          class="form-outline mb-4 border rounded"
+                        >
+                          <input
+                            type="text"
+                            name="institutionName"
+                            id="institution_name"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="institution_name"
+                            >Institution Name</label
+                          >
+                        </div>
+
+                        <div data-mdb-input-init class="form-outline mb-4">
+                          <label class="form-label" for="confusion_check"
+                            >Did you face confusion in subject choosing?</label
+                          >
+                          <div class="d-flex" id="confusion_check">
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="confusion"
+                                id="confusion_yes"
+                                value="no"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="confusion_yes"
+                                >Yes</label
+                              >
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="confusion"
+                                id="confusion_no"
+                                value="no"
+                              />
+                              <label class="form-check-label" for="confusion_no"
+                                >No</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-4">
+                          <label class="form-label" for="regret_check"
+                            >Do you regret the subject you are studying?</label
+                          >
+                          <div class="d-flex" id="regret_check">
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="regret"
+                                id="regret_yes"
+                                value="yes"
+                              />
+                              <label class="form-check-label" for="regret_yes"
+                                >Yes</label
+                              >
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="regret"
+                                id="regret_no"
+                                value="no"
+                              />
+                              <label class="form-check-label" for="regret_no"
+                                >No</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-mdb-input-init
+                          class="form-outline mb-4 border rounded"
+                        >
+                          <textarea
+                            name="reason_regret"
+                            id="reason"
+                            class="form-control form-control-lg"
+                          ></textarea>
+                          <label class="form-label" for="reason">Reason</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                      <div
+                        class="card-body p-4 p-lg-5 text-black"
+                        style="padding-top: 0 !important"
+                      >
+                        <div
+                          data-mdb-input-init
+                          class="form-outline mb-4 border rounded"
+                        >
+                          <input
+                            type="address"
+                            name="address"
+                            id="form2Example19"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="form2Example19"
+                            >Address</label
+                          >
+                        </div>
+                        <div
+                          data-mdb-input-init
+                          class="form-outline mb-4 border rounded"
+                        >
+                          <input
+                            type="email"
+                            name="email"
+                            id="form2Example20"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="form2Example20"
+                            >Email address</label
+                          >
+                        </div>
+
+                        <div
+                          data-mdb-input-init
+                          class="form-outline mb-4 border rounded"
+                        >
+                          <input
+                            type="password"
+                            name="confirm_password"
+                            id="confirm_password"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="confirm_password"
+                            >Confirm Password</label
+                          >
+                        </div>
+                        <div
+                          data-mdb-input-init
+                          class="form-outline mb-4 border rounded"
+                        >
+                          <input
+                            type="text"
+                            name="subject"
+                            id="sub_or_dep"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="sub_or_dep"
+                            >Subject or Department</label
+                          >
+                        </div>
+                        <div
+                          data-mdb-input-init
+                          class="form-outline mb-4 d-flex flex-column"
+                        >
+                          <label class="form-label" for="satisfied_check"
+                            >Are you satisfied with the subject you are
+                            studying?</label
+                          >
+                          <div class="d-flex pb-2" id="satisfied_check">
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="satisfied"
+                                id="satisfied_yes"
+                                value="yes"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="satisfied_yes"
+                                >Yes</label
+                              >
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="satisfied"
+                                id="satisfied_no"
+                                value="no"
+                              />
+                              <label class="form-check-label" for="satisfied_no"
+                                >No</label
+                              >
+                            </div>
+                          </div>
+                          <div
+                            data-mdb-input-init
+                            class="form-outline mb-4 border rounded"
+                          >
+                            <textarea
+                              rows="5"
+                              name="reason_satisfied"
+                              id="reason_text"
+                              class="form-control form-control-lg"
+                            ></textarea>
+                            <label class="form-label" for="reason_text"
+                              >Reason</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pt-1 mb-4 d-flex justify-content-end">
+                    <button
+                      type="button"
+                      class="btn btn-danger me-2"
+                      data-mdb-ripple-init
+                      data-mdb-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button class="btn btn-success btn-lg" type="submit">
+                      Update
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-top mt-3 py-2">
+          <p>
+            <strong class="text-black">
+              <i class="fas fa-book-open fs-6 text-success"></i> Level Of Study:
+            </strong>
+            9th
+          </p>
+          <p>
+            <strong class="text-black">
+              <i class="fas fa-book-open-reader fs-6 text-success"></i> Subject:
+            </strong>
+            Agriculture
+          </p>
+          <p>
+            <strong class="text-black">
+              <i class="fas fa-building-columns fs-6 text-success"></i>
+              Institution Name:
+            </strong>
+            A.T.I
+          </p>
+          <p>
+            <strong class="text-black">
+              <i class="fas fa-circle-question fs-6 text-success"></i>
+              Are you satisfied with the subject you are studying?
+            </strong>
+            Yes
+          </p>
+          <p>
+            <strong class="text-black">
+              <i class="fas fa-circle-question fs-6 text-success"></i>
+              Why you are satisfied with this subject you are studying?
+            </strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+            temporibus enim laboriosam adipisci praesentium voluptatem sunt,
+            dolor quasi et quidem aut. Quasi, debitis fugit odio nam in animi
+            rem vitae.
+          </p>
+          <p>
+            <strong class="text-black">
+              <i class="fas fa-circle-question fs-6 text-success"></i>
+              Do you regret the subject you are studying?
+            </strong>
+            Yes
+          </p>
+          <p>
+            <strong class="text-black">
+              <i class="fas fa-circle-question fs-6 text-success"></i>
+              Why you regret the subject you are studying?
+            </strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+            temporibus enim laboriosam adipisci praesentium voluptatem sunt,
+            dolor quasi et quidem aut. Quasi, debitis fugit odio nam in animi
+            rem vitae.
+          </p>
+          <p>
+            <strong class="text-black">
+              <i class="fas fa-circle-question fs-6 text-success"></i>
+              Did you face confusion in subject choosing?
+            </strong>
+            Yes
+          </p>
+        </div>
+      </section>
+    </div>
+    <!-- Footer  -->
+    <%- include('./partials/footer.ejs') %>
+    <!-- Main Content End  -->
+
+    <!-- End your project here-->
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+    ></script>
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"
+    ></script>
+
+    <!-- Your custom scripts (optional) -->
+    <script type="module" src="./src/js/main.js"></script>
+    <!-- <script src="./src/chart/communication-skill.js"></script> -->
+
+    <script src="./src/js/imageUpload.js"></script>
+  </body>
+</html>
