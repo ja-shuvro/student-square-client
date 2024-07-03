@@ -1,6 +1,6 @@
 const axios = require("axios");
 const getSpecificData = require("../../utils/getSpecificData");
-const BASE_URL = "https://studentsquare.org/ss-admin/p1";
+const BASE_URL = "http://localhost:4040/ss-admin/p1";
 
 exports.blogs = async (req, res) => {
   try {
@@ -23,6 +23,7 @@ exports.blogs = async (req, res) => {
       posts: posts.data.allPost,
       thumbs,
       pagination,
+      user: req.user,
     };
 
     res.render("./blogs.ejs", data);
@@ -72,7 +73,7 @@ exports.blog = async (req, res) => {
       peraOneImg: peraOneImg.data,
       peraTwoImg: peraTwoImg.data,
       peraThreeImg: peraThreeImg.data,
-      // featuredImg: featuredImg.data,
+      user: req.user,
     };
     res.render("./single-blog.ejs", data);
   } catch (error) {

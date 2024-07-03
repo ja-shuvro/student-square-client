@@ -10,6 +10,7 @@ const {
   others,
   user_profile,
 } = require("./index");
+const authMiddleware = require("../middlewares/userVerify");
 
 router.use(homepage);
 router.use(blogs);
@@ -18,6 +19,6 @@ router.use(notices_bord);
 router.use(magazin);
 router.use(auth);
 router.use(others);
-router.use(user_profile);
+router.use(authMiddleware, user_profile);
 
 module.exports = router;

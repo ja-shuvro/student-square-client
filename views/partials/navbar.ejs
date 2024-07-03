@@ -438,7 +438,7 @@
     </li>
 
     <!-- hidden befor login  -->
-    <li class="nav-item me-3 me-lg-1 c-right">
+    <li class="nav-item me-3 me-lg-1 c-right <%= user? '': 'hidden' %>">
       <div class="btn-group shadow-0">
         <button
           type="button"
@@ -465,7 +465,7 @@
             >
           </li>
           <li>
-            <a class="dropdown-item" href="#"
+            <a class="dropdown-item" href="#" id="logout-action"
               ><i class="fas fa-power-off text-danger"></i> Logout</a
             >
           </li>
@@ -474,7 +474,7 @@
     </li>
     <li class="nav-item me-3 me-lg-1 c-right">
       <div class="Rnav-btn-area">
-        <a href="/login" class="btn">
+        <a href="/login" class="btn <%= user? 'hidden': '' %>">
           <i class="fas fa-arrow-right-to-bracket"></i>
           Log In
         </a>

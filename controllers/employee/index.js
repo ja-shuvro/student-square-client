@@ -1,6 +1,6 @@
 // https://studentsquare.org/ss-admin/p1/api/public/employee
 const axios = require("axios");
-const BASE_URL = "https://studentsquare.org/ss-admin/p1";
+const BASE_URL = "http://localhost:4040/ss-admin/p1";
 const getSpecificData = require("../../utils/getSpecificData");
 
 exports.who_we_are = async (req, res) => {
@@ -115,6 +115,7 @@ exports.who_we_are = async (req, res) => {
       timorLeste: timorLestePosts.data.allPost,
       timorLesteDP: timorLestePP,
       pagination,
+      user: req.user,
     };
 
     res.render("./who-we-are.ejs", data);

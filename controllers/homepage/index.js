@@ -1,6 +1,6 @@
 // http://studentsquare.org/ss-admin/p1/api/public/news
 const axios = require("axios");
-const BASE_URL = "https://studentsquare.org/ss-admin/p1";
+const BASE_URL = "http://localhost:4040/ss-admin/p1";
 const getSpecificData = require("../../utils/getSpecificData");
 
 exports.homepage = async (req, res) => {
@@ -85,6 +85,7 @@ exports.homepage = async (req, res) => {
         allPost: partnersPosts.data.allPost,
         logo: partnersImg,
       },
+      user: req.user,
     };
 
     res.render("./index.ejs", data);

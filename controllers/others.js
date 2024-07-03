@@ -1,30 +1,55 @@
-// notFoundController.js
+const BASE_URL = "http://localhost:4040/ss-admin/p1";
+
 const privacyPolicy = (req, res, next) => {
   res.status(404).render("privacy-policy");
 };
 const about = (req, res, next) => {
-  res.status(404).render("about");
+  const data = {
+    user: req.user,
+  };
+  res.status(404).render("about", data);
 };
 const ourMission = (req, res, next) => {
-  res.status(404).render("our-mission");
+  const data = {
+    user: req.user,
+  };
+  res.status(404).render("our-mission", data);
 };
 const whereWeWork = (req, res, next) => {
-  res.status(404).render("where-we-work");
+  const data = {
+    user: req.user,
+  };
+  res.status(404).render("where-we-work", data);
 };
 const press = (req, res, next) => {
-  res.status(404).render("press");
+  const data = {
+    user: req.user,
+  };
+  res.status(404).render("press", data);
 };
 const whatWeDo = (req, res, next) => {
-  res.status(404).render("what-we-do");
+  const data = {
+    user: req.user,
+  };
+  res.status(404).render("what-we-do", data);
 };
 const termsOfUse = (req, res, next) => {
-  res.status(404).render("terms-of-use");
+  const data = {
+    user: req.user,
+  };
+  res.status(404).render("terms-of-use", data);
 };
 const faqs = (req, res, next) => {
-  res.status(404).render("faqs");
+  const data = {
+    user: req.user,
+  };
+  res.status(404).render("faqs", data);
 };
 const contact = (req, res, next) => {
-  res.status(404).render("contact");
+  const data = {
+    user: req.user,
+  };
+  res.status(404).render("contact", data);
 };
 
 module.exports = {

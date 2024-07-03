@@ -6,6 +6,7 @@ const cors = require("cors");
 const session = require("express-session");
 const allRouter = require("./router/router");
 const notFoundController = require("./controllers/notFound");
+const findUser = require("./middlewares/findUser");
 
 // Set trust proxy
 app.set("trust proxy", true);
@@ -28,7 +29,7 @@ app.use(cors());
 //   })
 // );
 
-app.use("/", allRouter);
+app.use("/", findUser, allRouter);
 app.use(notFoundController);
 
 // Start the server
