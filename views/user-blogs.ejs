@@ -57,15 +57,16 @@
     <!-- Main Content Start -->
     <div class="custom-container container my-5">
       <div class="intro_section">
-          <h1 class='position-relative'><%= user.name %>
-           <span class="position-absolute top-0 start-30 translate-middle badge rounded-pill badge-success fs-6 <%= user.role === 'author'? '' : 'hidden' %>"
-                style="text-transform: capitalize;">
+        <img src="/src/img/avatar.png" class="rounded-circle mb-4" style="width: 150px;" alt="<%= user.name %>" />
+          <h3 class='position-relative fw-bold'><%= user.name %>
+            <span class="position-absolute top-0 start-30 translate-middle badge rounded-pill badge-success  <%= user.role === 'author'? '' : 'hidden' %>"
+                style="text-transform: capitalize; font-size: 14px;">
               <%= user.role %>
               <span class="visually-hidden">unread messages</span>
             </span>
-        </h1>
-        <h3><%= user.email %></h3>
-        <h3><%= user.phone %></h3>
+        </h3>
+        <h6><%= user.email %></h6>
+        <h6><%= user.phone %></h6>
       </div>
 
       <section class="mt-3">
