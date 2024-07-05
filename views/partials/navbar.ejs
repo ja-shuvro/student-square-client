@@ -459,11 +459,13 @@
               ><i class="far fa-id-card text-success"></i> Profile</a
             >
           </li>
+          <% if (user?.role === 'author') { %>
           <li>
             <a class="dropdown-item" href="/dashboard/blogs"
               ><i class="fas fa-blog text-success"></i> Blogs</a
             >
           </li>
+          <% } %>
           <li>
             <a class="dropdown-item" href="#" id="logout-action"
               ><i class="fas fa-power-off text-danger"></i> Logout</a

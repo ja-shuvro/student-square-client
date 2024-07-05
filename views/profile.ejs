@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Jhon Doe - Unveiling Success</title>
+    <title><%= user.name %>  - Unveiling Success</title>
     <link
       rel="shortcut icon"
       href="/src/img/SSsiteIcon.png"
@@ -58,9 +58,15 @@
     <!-- Main Content Start -->
     <div class="custom-container container my-5">
       <div class="intro_section">
-        <h1><%= user.name %></h1>
-        <h3><%= user.email %></h3>
-        <h3><%= user.phone %></h3>
+        <h1 class='position-relative'><%= user.name %>
+          <span class="position-absolute top-0 start-30 translate-middle badge rounded-pill badge-success fs-6 <%= user.role === 'author'? '' : 'hidden' %>"
+               style="text-transform: capitalize;">
+             <%= user.role %>
+             <span class="visually-hidden">unread messages</span>
+           </span>
+       </h1>
+       <h3><%= user.email %></h3>
+       <h3><%= user.phone %></h3>
       </div>
 
       <section class="mt-3">

@@ -1,5 +1,5 @@
 const { default: axios } = require("axios");
-const BASE_URL = `http://localhost:4040`;
+const BASE_URL = `http://studentsquare.org/ss-admin/p1`;
 
 const userVerify = async (req, res, next) => {
   try {
@@ -9,12 +9,17 @@ const userVerify = async (req, res, next) => {
       return res.redirect("/login");
     }
 
-    const verifyTokey = await axios.post(
-      `${BASE_URL}/ss-admin/p1/auth/users/token-verify`,
-      { token }
+    const response = await axios.post(
+      `${BASE_URL}/auth/users/token-verify`,
+      { token }, // empty object for POST data since we're only sending headers
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
     );
 
-    req.user = verifyTokey.data.user;
+    req.user = response.data.user;
     // Proceed to the next middleware or route handler
     next();
   } catch (error) {

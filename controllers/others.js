@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:4040/ss-admin/p1";
+const BASE_URL = "http://studentsquare.org/ss-admin/p1";
 
 const privacyPolicy = (req, res, next) => {
   res.status(404).render("privacy-policy");

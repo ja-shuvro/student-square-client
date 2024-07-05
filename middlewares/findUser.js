@@ -1,5 +1,5 @@
 const { default: axios } = require("axios");
-const BASE_URL = `http://localhost:4040`;
+const BASE_URL = `http://studentsquare.org`;
 
 const findUser = async (req, res, next) => {
   try {

@@ -1,6 +1,6 @@
 // https://studentsquare.org/ss-admin/p1/api/public/employee
 const axios = require("axios");
-const BASE_URL = "http://localhost:4040/ss-admin/p1";
+const BASE_URL = "http://studentsquare.org/ss-admin/p1";
 const getSpecificData = require("../../utils/getSpecificData");
 
 exports.who_we_are = async (req, res) => {
