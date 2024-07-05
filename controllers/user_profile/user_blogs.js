@@ -79,10 +79,6 @@ const user_blog = async (req, res, next) => {
       cleanTags(post.tags)
     );
 
-    console.log(approveTags);
-    console.log(pendingTags);
-    console.log(rejectTags);
-
     const data = {
       user: req.user,
 

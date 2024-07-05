@@ -535,22 +535,18 @@
                         <td> <%= blogs.approvePost.approveCategories[index].category.title %></td>
                         <td><%= post.reading_time %></td>
                         <td>
-<% blogs.approvePost.approveTags[index].forEach(tag => { %>
-  <span class="badge badge-success rounded-pill d-inline"><%= tag %></span>
-<% }); %>
+                        <% blogs.approvePost.approveTags[index].forEach(tag => { %>
+                          <span class="badge badge-success rounded-pill d-inline"><%= tag %></span>
+                        <% }); %>
 
                         </td>
-                        <td>
-                          <button
-                            type="button"
-                            class="btn btn-tertiary"
-                            data-mdb-ripple-init
-                            data-mdb-modal-init
-                            data-mdb-target="#addBlog"
-                            id="<%= post.id %>"
-                          >
+                        <td class=" d-flex align-item-center justify-item-center">
+                          <a href='#' class='p-0 me-2' data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#addBlog" id="<%= post.id %> data-mdb-tooltip-init title="Edit Blog">
                             <i class="far fa-pen-to-square text-success fs-6"></i>
-                          </button>
+                          </a>
+                          <a href="/blogs/<%= post.id%>" target="_blank" rel="noopener noreferrer" data-mdb-tooltip-init title="Visit Blog">
+                            <i class="fas fa-globe text-info fs-6"></i>
+                          </a>
                         </td>
                       </tr>
                     <% }); %>
@@ -586,9 +582,9 @@
                         <td> <%= blogs.pendingPost.pendingCategories[index].category?.title %></td>
                         <td><%= post.reading_time %></td>
                         <td>
-<% blogs.pendingPost.pendingTags[index].forEach(tag => { %>
-  <span class="badge badge-success rounded-pill d-inline"><%= tag %></span>
-<% }); %>
+                        <% blogs.pendingPost.pendingTags[index].forEach(tag => { %>
+                          <span class="badge badge-success rounded-pill d-inline"><%= tag %></span>
+                        <% }); %>
                         </td>
                         <td>
                           <button
@@ -626,34 +622,34 @@
                     </tr>
                   </thead>
                   <tbody>
-   <% blogs.rejectPost.allPost.forEach((post, index) => { %>
-      <tr>
-        <td>
-          <p class="fw-normal mb-1">
-            <%= post.title %>
-          </p>
-        </td>
-        <td> <%= blogs.rejectPost.rejectCategories[index].category.title %></td>
-        <td><%= post.reading_time %></td>
-        <td>
-<% blogs.rejectPost.rejectTags[index].forEach(tag => { %>
-  <span class="badge badge-success rounded-pill d-inline"><%= tag %></span>
-<% }); %>
-        </td>
-        <td>
-          <button
-            type="button"
-            class="btn btn-tertiary"
-            data-mdb-ripple-init
-            data-mdb-modal-init
-            data-mdb-target="#addBlog"
-            id="<%= post.id %>"
-          >
-            <i class="far fa-pen-to-square text-success fs-6"></i>
-          </button>
-        </td>
-      </tr>
-    <% }); %>
+                  <% blogs.rejectPost.allPost.forEach((post, index) => { %>
+                  <tr>
+                      <td>
+                        <p class="fw-normal mb-1">
+                          <%= post.title %>
+                        </p>
+                      </td>
+                      <td> <%= blogs.rejectPost.rejectCategories[index].category.title %></td>
+                      <td><%= post.reading_time %></td>
+                      <td>
+                        <% blogs.rejectPost.rejectTags[index].forEach(tag => { %>
+                          <span class="badge badge-success rounded-pill d-inline"><%= tag %></span>
+                        <% }); %>
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-tertiary"
+                          data-mdb-ripple-init
+                          data-mdb-modal-init
+                          data-mdb-target="#addBlog"
+                          id="<%= post.id %>"
+                        >
+                          <i class="far fa-pen-to-square text-success fs-6"></i>
+                        </button>
+                      </td>
+                  </tr>
+                  <% }); %>
                   </tbody>
                 </table>
               </div>
